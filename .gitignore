@@ -1,0 +1,5 @@
+.build
+.DS_Store
+.env
+.nuxt
+node_modules
