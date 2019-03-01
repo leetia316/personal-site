@@ -1,0 +1,3 @@
+```js
+<Message text="loser." />
+```

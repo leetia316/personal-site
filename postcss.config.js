@@ -21,7 +21,7 @@ const purgeConfig = {
 module.exports = ({ env }) => ({
   plugins: [
     easyimport(),
-    tailwind('tailwind.js'),
+    tailwind('tailwind.config.js'),
     autoprefixer(),
     env === 'production' ? clean() : false,
     env === 'production' ? purgeCSS(purgeConfig) : false,

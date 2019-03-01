@@ -5,10 +5,11 @@
   "author": "Matt Waler",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt",
     "generate": "nuxt generate",
+    "start": "nuxt start",
+    "styleguide": "vue-styleguidist server",
     "test": "jest"
   },
   "dependencies": {
@@ -38,6 +39,7 @@
     "tailwindcss": "^0.7.4",
     "vue": "^2.6.7",
     "vue-jest": "^3.0.2",
+    "vue-styleguidist": "^3.0.16",
     "vue-template-compiler": "^2.6.7",
     "webpack": "^4.29.5"
   }
