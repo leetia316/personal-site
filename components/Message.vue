@@ -13,6 +13,7 @@
       text: {
         type: String,
         default: 'world.',
+        required: false,
       },
     },
   }

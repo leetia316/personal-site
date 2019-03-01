@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-markdown",
+  "name": "personal-site",
   "version": "1.0.0",
   "description": "My spectacular Nuxt.js project",
   "author": "Matt Waler",
@@ -8,7 +8,7 @@
     "build": "nuxt build",
     "dev": "nuxt",
     "generate": "nuxt generate",
-    "guide": "vue-styleguidist server",
+    "sg": "vue-styleguidist server",
     "start": "nuxt start",
     "test": "jest"
   },
