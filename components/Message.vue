@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="px-16">
+    <p class="p-16 bg-black text-white inline-block">
       Hello {{ text }}
     </p>
   </div>
@@ -13,8 +13,6 @@
       text: {
         type: String,
         default: 'world.',
-
-        required: false,
       },
     },
   }
