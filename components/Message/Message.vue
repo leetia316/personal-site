@@ -13,10 +13,9 @@
       text: {
         type: String,
         default: 'world',
-        required: true,
       },
     },
   }
 </script>
 
-<style scoped src="./Message.css"></style>
+<style lang="postcss" src="./Message.pcss"></style>
