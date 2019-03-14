@@ -1,4 +1,7 @@
 @import 'tailwindcss/preflight';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import 'imports/*.css';
+
+html {
+  @apply font-sans;
+}

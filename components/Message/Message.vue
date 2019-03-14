@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="p-16 bg-black text-white inline-block">
+    <p class="scoped">
       Hello {{ text }}
     </p>
   </div>
@@ -12,9 +12,11 @@
     props: {
       text: {
         type: String,
-        default: 'world.',
-        required: false,
+        default: 'world',
+        required: true,
       },
     },
   }
 </script>
+
+<style scoped src="./Message.css"></style>

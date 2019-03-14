@@ -7,7 +7,7 @@ module.exports = {
       })
     },
   },
-  css: ['assets/main.css'],
+  css: ['~/assets/main.css'],
   generate: {
     dir: '.build',
   },

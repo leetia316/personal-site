@@ -1,8 +1,10 @@
 const autoprefixer = require('autoprefixer')
-const easyimport = require('postcss-easy-import')
-const tailwind = require('tailwindcss')
 const clean = require('postcss-clean')
+const easyimport = require('postcss-easy-import')
+const easyMediaQuery = require('postcss-easy-media-query')
+const nested = require('postcss-nested')
 const purgeCSS = require('@fullhuman/postcss-purgecss')
+const tailwind = require('tailwindcss')
 
 const purgeConfig = {
   content: ['**/*.vue'],
@@ -22,6 +24,8 @@ module.exports = ({ env }) => ({
   plugins: [
     easyimport(),
     tailwind('tailwind.config.js'),
+    easyMediaQuery(),
+    nested(),
     autoprefixer(),
     env === 'production' ? clean() : false,
     env === 'production' ? purgeCSS(purgeConfig) : false,

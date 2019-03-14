@@ -1,11 +1,14 @@
 <template>
-  <p class="text-16">
-    Hello index!
-  </p>
+  <div>
+    <Message text="fatty." />
+  </div>
 </template>
 
 <script>
+  import Message from '~/components/Message/Message.vue'
+
   export default {
-    components: {},
+    name: 'Index',
+    components: { Message },
   }
 </script>
