@@ -1,5 +1,11 @@
 const rem = value => `${value / 16}rem`;
 
+const screens = {
+  sm: '576px',
+  md: '768px',
+  lg: '960px',
+}
+
 const colors = {
   black: '#111111',
   white: '#eeeeee',
@@ -69,11 +75,7 @@ const spacing = {
 
 module.exports = {
   colors,
-  screens: {
-    sm: '576px',
-    md: '768px',
-    lg: '960px',
-  },
+  screens,
   fonts: {
     sans: ['lato', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Helvetica Neue', 'sans-serif'],
   },

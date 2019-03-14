@@ -1,11 +1,3 @@
-<template>
-  <div>
-    <p class="scoped">
-      Hello {{ text }}
-    </p>
-  </div>
-</template>
-
 <script>
   export default {
     name: 'Message',
@@ -19,3 +11,11 @@
 </script>
 
 <style lang="postcss" src="./Message.pcss"></style>
+
+<template>
+  <div>
+    <p class="scoped">
+      Hello {{ text }}
+    </p>
+  </div>
+</template>
