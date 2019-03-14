@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb-base', 'plugin:vue/recommended'],
+  extends: ['airbnb-base', 'plugin:vue/recommended', 'plugin:jest/recommended'],
   overrides: [{
     files: ['*.vue'],
     rules: {
@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 8,
     sourceType: "module",
   },
-  plugins: ['import', 'node', 'promise'],
+  plugins: ['import', 'jest', 'node', 'promise'],
   rules: {
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
