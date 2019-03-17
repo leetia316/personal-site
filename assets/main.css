@@ -3,5 +3,18 @@
 @import 'tailwindcss/utilities';
 
 html {
-  @apply font-sans;
+  @apply font-body text-black;
+
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    @apply text-true-black;
+  }
+}
+
+.trans {
+  transition: all .2s ease;
 }

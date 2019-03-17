@@ -7,7 +7,8 @@ const screens = {
 }
 
 const colors = {
-  black: '#111111',
+  'true-black': 'black',
+  black: '#333',
   white: '#eeeeee',
   'gray-100': '#F5F7FA',
   'gray-200': '#E4E7EB',
@@ -77,7 +78,8 @@ module.exports = {
   colors,
   screens,
   fonts: {
-    sans: ['lato', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Helvetica Neue', 'sans-serif'],
+    body: ['system-ui', 'BlinkMacSystemFont', '-apple-system', 'Helvetica Neue', 'sans-serif'],
+    headline: ['Poppins', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Helvetica Neue', 'sans-serif'],
   },
   textSizes: {
     14: rem(14),

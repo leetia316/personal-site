@@ -1,10 +1,12 @@
 module.exports = {
   build: {
-    extend (config) {
+    extend: (config) => {
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/;
       config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-      })
+        test: /\.svg$/,
+        loader: 'vue-svg-loader',
+      });
     },
   },
   css: ['~/assets/main.css'],
@@ -14,6 +16,7 @@ module.exports = {
   head: {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins:400,700' },
     ],
     meta: [
       { charset: 'utf-8' },
