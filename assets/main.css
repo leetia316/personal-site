@@ -3,13 +3,11 @@
 @import 'tailwindcss/utilities';
 
 html {
-  @apply font-body text-black;
-
+  @apply font-body text-16 text-black;
 }
 
 a {
   color: inherit;
-
   &:hover {
     @apply text-true-black;
   }
