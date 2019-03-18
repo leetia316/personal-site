@@ -10,7 +10,7 @@
   }
 </script>
 
-<style lang="postcss" src="./Message.pcss"></style>
+<style lang="postcss" scoped src="./Message.pcss"></style>
 
 <template>
   <div>
