@@ -24,6 +24,17 @@ module.exports = {
     semi: 'off',
     'space-before-function-paren': 'off',
     'vue/attribute-hyphenation': 'off',
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "never",
+    }],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": 1,
+      "multiline": {
+        "max": 1,
+        "allowFirstLine": true,
+      }
+    }],
     'vue/no-v-html': 'off',
     'vue/script-indent': ['warn', 2, { baseIndent: 1 }]
   },
