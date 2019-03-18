@@ -8,6 +8,7 @@ module.exports = {
         loader: 'vue-svg-loader',
       });
     },
+    extractCSS: true,
   },
   css: ['~/assets/main.css'],
   generate: {
@@ -27,4 +28,5 @@ module.exports = {
   },
   loading: { color: '#fff' },
   mode: 'universal',
+  rootDir: './',
 }
