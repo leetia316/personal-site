@@ -43,5 +43,10 @@
   export default {
     name: 'Index',
     components: { dev, github, linkedin },
+    head() {
+      return {
+        title: 'Matt Waler | Frontend Developer',
+      }
+    },
   }
 </script>
