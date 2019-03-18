@@ -18,6 +18,7 @@ const purgeConfig = {
       extensions: ['vue'],
     },
   ],
+  whitelist: ['html', 'body'],
 }
 
 module.exports = ({ env }) => ({
