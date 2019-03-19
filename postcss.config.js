@@ -18,7 +18,7 @@ const purgeConfig = {
       extensions: ['vue'],
     },
   ],
-  whitelist: ['html', 'body'],
+  whitelist: ['html', 'body', 'fade-enter-active', 'fade-leave-active', 'fade-enter', 'fade-leave-to'],
 }
 
 module.exports = ({ env }) => ({
