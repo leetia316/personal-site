@@ -92,6 +92,7 @@ module.exports = {
     48: rem(48),
     60: rem(60),
     72: rem(72),
+    96: rem(96),
   },
   fontWeights: {
     100: 100,
