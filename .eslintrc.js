@@ -26,7 +26,7 @@ module.exports = {
     'vue/attribute-hyphenation': 'off',
     "vue/html-closing-bracket-newline": ["error", {
       "singleline": "never",
-      "multiline": "never",
+      "multiline": "always",
     }],
     "vue/max-attributes-per-line": ["error", {
       "singleline": 1,

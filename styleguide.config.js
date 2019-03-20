@@ -4,8 +4,9 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
   components: './components/**/[A-Z]*.vue',
   getExampleFilename(componentPath) {
-    const newFile = componentPath.replace(/vue/, 'md')
-    return newFile
+    const newFolder = componentPath.replace(/components/, 'docs')
+    const newExt = newFolder.replace(/vue/, 'md')
+    return newExt
   },
   require: [
     path.join(__dirname, 'assets/main.css'),
@@ -29,7 +30,7 @@ module.exports = {
           use: ['style-loader', 'postcss-loader'],
         },
         {
-          test: /\.pcss$/,
+          test: /\.postcss$/,
           use: ['style-loader', 'postcss-loader'],
         },
       ],
