@@ -26,5 +26,6 @@
     @screen md {
       font-size: 56px;
     }
+    @apply
   }
 </style>

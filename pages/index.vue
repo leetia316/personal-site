@@ -18,7 +18,7 @@
     <p class="test">
       Hello?
     </p>
-    <h1 class="text-36 font-headline font-700 mb-24">
+    <h1 class="text-base md:text-5xl font-headline font-700 mb-24">
       I design, develop, and deploy websites.
     </h1>
     <h2 class="max-w-640 leading-normal mb-24 text-16 font-400">
@@ -97,9 +97,6 @@
 </script>
 
 <style lang="postcss">
-  .test {
-    @apply font-sans text-another-black;
-  }
   html, body {
     @screen sm {
       font-size: 28px;
