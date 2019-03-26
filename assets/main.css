@@ -5,7 +5,7 @@
 /* purgecss start ignore */
 
 html, body {
-  @apply font-sans text-base text-gray-900;
+  @apply font-sans text-16 text-gray-900;
 }
 
 a {
