@@ -11,7 +11,7 @@ module.exports = {
   require: [
     path.join(__dirname, 'assets/main.css'),
   ],
-  title: 'mattwaler.com styleguidist',
+  title: 'Style Guide',
   webpackConfig: {
     module: {
       rules: [

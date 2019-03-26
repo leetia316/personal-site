@@ -18,7 +18,6 @@ const purgeConfig = {
       extensions: ['vue'],
     },
   ],
-  whitelist: ['html', 'body', 'fade-enter-active', 'fade-leave-active', 'fade-enter', 'fade-leave-to'],
 }
 
 module.exports = ({ env }) => ({
@@ -28,7 +27,7 @@ module.exports = ({ env }) => ({
     easyMediaQuery(),
     nested(),
     autoprefixer(),
-    env === 'production' ? clean() : false,
     env === 'production' ? purgeCSS(purgeConfig) : false,
+    env === 'production' ? clean() : false,
   ],
 })
