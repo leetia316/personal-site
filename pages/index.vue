@@ -15,6 +15,9 @@
         class="w-96 h-96 fill-current mb-24"
       />
     </transition>
+    <p class="test">
+      Hello?
+    </p>
     <h1 class="text-36 font-headline font-700 mb-24">
       I design, develop, and deploy websites.
     </h1>
@@ -92,3 +95,14 @@
     },
   }
 </script>
+
+<style lang="postcss">
+  .test {
+    @apply font-sans text-another-black;
+  }
+  html, body {
+    @screen sm {
+      font-size: 28px;
+    }
+  }
+</style>

@@ -1,0 +1,22 @@
+html, body {
+  @apply font-sans text-base text-gray-900;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    @apply text-black;
+  }
+}
+
+.trans {
+  transition: all .2s ease;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .25s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

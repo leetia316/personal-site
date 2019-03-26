@@ -22,7 +22,6 @@
   .scoped {
     @screen sm {
       font-size: 28px;
-      @apply object-contain;
     }
     @screen md {
       font-size: 56px;

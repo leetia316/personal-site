@@ -1,13 +1,13 @@
 {
   "files.exclude": {
-    ".babelrc": true,
-    ".editorconfig": true,
-    ".eslintrc.js": true,
-    ".gitignore": true,
-    "jest.config.js": true,
-    "node_modules": true,
-    "postcss.config.js": true,
-    "styleguide.config.js": true,
-    "yarn.lock": true
+    // ".babelrc": true,
+    // ".editorconfig": true,
+    // ".eslintrc.js": true,
+    // ".gitignore": true,
+    // "jest.config.js": true,
+    // "node_modules": true,
+    // "postcss.config.js": true,
+    // "styleguide.config.js": true,
+    // "yarn.lock": true
   }
 }
