@@ -9,6 +9,7 @@
     "dev": "nuxt",
     "gen": "nuxt generate",
     "sg": "vue-styleguidist server",
+    "sg:build": "vue-styleguidist build",
     "start": "nuxt start",
     "test": "jest"
   },

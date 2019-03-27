@@ -11,6 +11,7 @@ module.exports = {
   require: [
     path.join(__dirname, 'assets/main.css'),
   ],
+  styleguideDir: '.styleguide',
   title: 'Style Guide',
   webpackConfig: {
     module: {
