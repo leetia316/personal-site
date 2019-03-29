@@ -1,4 +1,9 @@
+require('dotenv').config()
+
 module.exports = {
+  env: {
+    API: process.env.API,
+  },
   build: {
     extend: (config) => {
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
@@ -46,4 +51,5 @@ module.exports = {
   },
   loading: false,
   mode: 'universal',
+  plugins: ['~/plugins/axios.js'],
 }
