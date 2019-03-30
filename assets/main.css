@@ -4,6 +4,10 @@
 
 /* purgecss start ignore */
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   @apply font-sans text-16 text-gray-900;
 }
