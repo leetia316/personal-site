@@ -78,6 +78,7 @@
     mounted() {
       setTimeout(() => {
         this.isLoaded = true
+        console.warn(this.data)
       }, 250)
     },
   }
