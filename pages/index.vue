@@ -6,7 +6,7 @@
       <div
         v-if="isLoaded"
         class="flex flex-col min-h-100vh justify-center sm:items-center sm:text-center p-24">
-        <nuxt-link to="/">
+        <nuxt-link to="/contact">
           <logo class="w-96 h-96 fill-current mb-24" />
         </nuxt-link>
         <h1 class="text-36 font-headline font-700 mb-24">
