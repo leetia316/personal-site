@@ -5,7 +5,7 @@
       mode="out-in">
       <div
         v-if="isLoaded"
-        class="flex flex-col min-h-100vh justify-center sm:items-center sm:text-center p-24">
+        class="flex flex-col min-h-100vh md:h-100% justify-center sm:items-center sm:text-center px-24">
         <logo class="w-96 h-96 fill-current mb-24" />
         <h1 class="text-36 font-headline font-700 mb-24">
           {{ data.headline }}
