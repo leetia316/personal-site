@@ -12,7 +12,7 @@ const purgeConfig = {
     {
       extractor: class TailwindExtractor {
         static extract(content) {
-          return content.match(/[A-z0-9-:%\/]+/g) || [];
+          return content.match(/[A-z0-9-:%/]+/g) || [];
         }
       },
       extensions: ['vue'],
@@ -27,7 +27,7 @@ module.exports = ({ env }) => ({
     easyMediaQuery(),
     nested(),
     autoprefixer(),
-    // env === 'production' ? purgeCSS(purgeConfig) : false,
+    env === 'production' ? purgeCSS(purgeConfig) : false,
     env === 'production' ? clean() : false,
   ],
 })
