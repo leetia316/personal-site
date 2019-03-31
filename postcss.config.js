@@ -27,7 +27,7 @@ module.exports = ({ env }) => ({
     easyMediaQuery(),
     nested(),
     autoprefixer(),
-    env === 'production' ? purgeCSS(purgeConfig) : false,
+    // env === 'production' ? purgeCSS(purgeConfig) : false,
     env === 'production' ? clean() : false,
   ],
 })
