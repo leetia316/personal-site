@@ -9,7 +9,7 @@
 }
 
 html, body {
-  @apply font-sans text-16 text-gray-900;
+  @apply font-sans text-16 text-gray-900 m-0 p-0;
 }
 
 a {
