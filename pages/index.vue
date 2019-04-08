@@ -44,6 +44,7 @@
 </template>
 
 <script>
+  import gql from 'graphql-tag'
   import dev from '~/assets/icons/dev.svg'
   import github from '~/assets/icons/github.svg'
   import linkedin from '~/assets/icons/linkedin.svg'
@@ -59,6 +60,19 @@
       return {
         isLoaded: false,
       }
+    },
+    apollo: {
+      gqlData: {
+        query: gql`
+          {
+            testing {
+              content
+              headline
+            }
+          }
+        `,
+        update: data => data.testing,
+      },
     },
     asyncData() {
       return axios({
