@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: ['import', 'jest', 'node', 'promise'],
   rules: {
+    'global-require': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
     'max-len': ['error', { 'code': 120 }],
