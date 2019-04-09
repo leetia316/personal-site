@@ -65,5 +65,5 @@ module.exports = {
       },
     },
   },
-  plugins: ['~/plugins/axios.js'],
+  plugins: ['~/plugins/globalComponents'],
 }
