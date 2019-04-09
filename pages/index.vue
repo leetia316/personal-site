@@ -3,12 +3,11 @@
     <div
       class="flex flex-col min-h-100vh md:h-100vh justify-center sm:items-center sm:text-center px-24">
       <Logo class="w-96 h-96 fill-current mb-24" />
-      <Message />
       <h1 class="text-36 font-headline font-700 mb-24">
-        blah
+        {{ res.headline }}
       </h1>
       <h2 class="max-w-640 leading-normal mb-24 text-16 font-400">
-        blah
+        {{ res.content }}
       </h2>
       <h3 class="pb-8 font-600">
         I am currently available for business opportunities!
@@ -45,16 +44,14 @@
   export default {
     name: 'Index',
     apollo: {
-      gqlData: {
-        query: gql`
-          {
-            testing {
-              content
-              headline
-            }
+      res: {
+        query: gql`{
+          testing(where: { id: { _eq: 1 } }) {
+            content
+            headline
           }
-        `,
-        update: data => data.testing,
+        }`,
+        update: data => data.testing[0],
       },
     },
     head() {

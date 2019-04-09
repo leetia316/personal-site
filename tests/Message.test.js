@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Message from './Message.vue'
+import Message from '~/components/Message.vue'
 
 describe('Message', () => {
   test('is a Vue instance', () => {
