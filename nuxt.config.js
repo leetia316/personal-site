@@ -1,8 +1,18 @@
 require('dotenv').config()
 
 module.exports = {
-  env: {
-    API: process.env.API,
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.ENDPOINT,
+        httpLinkOptions: {
+          headers: {
+            'content-type': 'application/json',
+            'x-hasura-admin-secret': process.env.SECRET,
+          },
+        },
+      },
+    },
   },
   build: {
     extend: (config) => {
@@ -52,18 +62,5 @@ module.exports = {
   loading: false,
   mode: 'universal',
   modules: ['@nuxtjs/apollo'],
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: process.env.ENDPOINT,
-        httpLinkOptions: {
-          headers: {
-            'content-type': 'application/json',
-            'x-hasura-admin-secret': process.env.SECRET,
-          },
-        },
-      },
-    },
-  },
   plugins: ['~/plugins/globalComponents'],
 }
