@@ -57,10 +57,6 @@ module.exports = {
       { name: 'msapplication-config', content: '/browserconfig.xml' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
     ],
-    script: [
-      { src: 'scripts/tweenMax.js' },
-      { src: 'scripts/wavify.js' },
-    ],
     title: 'Hello!',
   },
   loading: false,

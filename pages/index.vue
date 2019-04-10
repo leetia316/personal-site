@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white flex flex-col min-h-100vh md:h-100vh justify-center sm:items-center sm:text-center px-24">
+  <div class="flex flex-col min-h-100vh md:h-100vh justify-center sm:items-center sm:text-center px-24">
     <Logo
       aria-hidden="true"
       class="w-96 h-96 fill-current mb-24" />
