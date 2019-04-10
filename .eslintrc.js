@@ -6,6 +6,9 @@ module.exports = {
       indent: 'off'
     }
   }],
+  globals: {
+    wavify: true,
+  },
   parser: "vue-eslint-parser",
   parserOptions: {
     parser: "babel-eslint",
@@ -33,7 +36,6 @@ module.exports = {
       "singleline": 1,
       "multiline": {
         "max": 1,
-        "allowFirstLine": false,
       }
     }],
     'vue/no-v-html': 'off',

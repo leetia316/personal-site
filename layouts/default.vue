@@ -1,5 +1,10 @@
 <template>
-  <nuxt role="presentation" />
+  <main>
+    <Waves />
+    <nuxt
+      class="z-50 relative"
+      role="presentation" />
+  </main>
 </template>
 
 <script>
