@@ -2,8 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* purgecss start ignore */
-
 * {
   box-sizing: border-box;
 }
@@ -18,5 +16,3 @@ a {
     @apply text-black;
   }
 }
-
-/* purgecss end ignore */
