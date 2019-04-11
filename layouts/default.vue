@@ -10,6 +10,7 @@
         document.querySelector('#__layout'),
       ]
       divs.forEach(div => div.setAttribute('role', 'presentation'))
+      document.querySelector('body').setAttribute('title', 'Page content')
     },
   }
 </script>
