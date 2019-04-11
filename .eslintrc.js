@@ -6,9 +6,6 @@ module.exports = {
       indent: 'off'
     }
   }],
-  globals: {
-    wavify: true,
-  },
   parser: "vue-eslint-parser",
   parserOptions: {
     parser: "babel-eslint",

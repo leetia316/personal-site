@@ -3,4 +3,5 @@
 .env
 .nuxt
 .styleguide
+functions/dist
 node_modules
