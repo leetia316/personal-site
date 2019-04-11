@@ -8,7 +8,6 @@ module.exports = {
         httpLinkOptions: {
           headers: {
             'content-type': 'application/json',
-            'x-hasura-admin-secret': process.env.SECRET,
           },
         },
       },
