@@ -1,5 +1,11 @@
 export const state = () => ({
-  auth: false,
+  config: {
+    auth: false,
+  },
 })
 
-export const mutations = {}
+export const mutations = {
+  authenticate (state, res) {
+    state.config = res
+  },
+}
