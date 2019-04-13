@@ -4,10 +4,10 @@
       v-model="input"
       placeholder="Enter password"
       class="border px-24 py-8 text-center"
-      type="text">
+      type="text"
+      @keyup.enter="submit">
     <button
       class="border px-24 py-8 bg-white mt-32"
-      @keyup.enter="submit"
       @click="submit">
       Send
     </button>
