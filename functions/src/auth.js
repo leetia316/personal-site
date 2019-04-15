@@ -14,13 +14,14 @@ exports.handler = async (event, context) => {
       headers,
       body: JSON.stringify({
         auth: true,
+        secret: SECRET,
       }),
     }
   } return {
-    statusCode: 200,
+    statusCode: 401,
     headers,
     body: JSON.stringify({
-      auth: false,
+      message: 'Incorrect password.',
     }),
   }
 }
