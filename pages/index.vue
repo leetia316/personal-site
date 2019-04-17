@@ -47,18 +47,10 @@
 
   export default {
     name: 'Index',
-    data() {
-      return {
-        headline: null,
-        content: null,
-      }
-    },
-    asyncData() {
-      return axios.get('http://localhost:9000/fauna')
-        .then(res => ({
-          headline: res.data.headline,
-          content: res.data.content,
-        }))
+    async asyncData() {
+      const res = await axios.get('http://localhost:9000/fauna')
+      const { headline, content } = res.data
+      return { headline, content }
     },
     head() {
       return {
