@@ -46,7 +46,7 @@
   export default {
     name: 'Index',
     async asyncData({ $axios }) {
-      const res = await $axios.$get('/fauna')
+      const res = await $axios.$get('/read')
       const { headline, content } = res
       return { headline, content }
     },
