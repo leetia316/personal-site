@@ -43,13 +43,11 @@
 </template>
 
 <script>
-  import axios from 'axios'
-
   export default {
     name: 'Index',
-    async asyncData() {
-      const res = await axios.get('http://localhost:9000/fauna')
-      const { headline, content } = res.data
+    async asyncData({ $axios }) {
+      const res = await $axios.$get('/fauna')
+      const { headline, content } = res
       return { headline, content }
     },
     head() {

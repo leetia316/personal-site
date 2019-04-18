@@ -2,6 +2,9 @@ require('dotenv').config()
 const head = require('./head.config')
 
 module.exports = {
+  axios: {
+    baseURL: process.env.FUNCTIONS,
+  },
   build: {
     extractCSS: true,
   },
@@ -10,6 +13,6 @@ module.exports = {
   head,
   loading: false,
   mode: 'universal',
-  modules: ['@nuxtjs/dotenv', 'nuxt-svg-loader'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/dotenv', 'nuxt-svg-loader'],
   plugins: ['~/plugins/globalComponents'],
 }
