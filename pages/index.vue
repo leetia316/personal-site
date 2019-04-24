@@ -46,8 +46,8 @@
   export default {
     name: 'Index',
     async asyncData({ $axios }) {
-      const res = await $axios.$get('/read')
-      const { headline, content } = res
+      const res = await $axios.$get('/singletons/38')
+      const { headline, content } = res.acf
       return { headline, content }
     },
     head() {

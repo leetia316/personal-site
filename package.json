@@ -5,10 +5,9 @@
   "author": "Matt Waler",
   "private": true,
   "scripts": {
-    "build": "nuxt build && netlify-lambda build functions/src",
+    "build": "nuxt build",
     "dev": "nuxt",
-    "functions": "netlify-lambda serve functions/src -c functions/webpack.config.js",
-    "gen": "nuxt generate && netlify-lambda build functions/src -c functions/webpack.config.js",
+    "gen": "nuxt generate",
     "sg": "vue-styleguidist server",
     "sg:build": "vue-styleguidist build",
     "start": "nuxt start",
@@ -19,7 +18,6 @@
     "@nuxtjs/dotenv": "^1.3.0",
     "cross-env": "^5.2.0",
     "dotenv": "^7.0.0",
-    "faunadb": "^2.6.1",
     "nuxt": "^2.4.0",
     "nuxt-svg-loader": "^1.0.1"
   },
@@ -41,7 +39,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-vue": "^5.2.2",
     "jest": "^23.6.0",
-    "netlify-lambda": "^1.4.3",
     "nodemon": "^1.18.9",
     "postcss-clean": "^1.1.0",
     "postcss-easy-import": "^3.0.0",

@@ -3,7 +3,7 @@ const head = require('./head.config')
 
 module.exports = {
   axios: {
-    baseURL: process.env.FUNCTIONS,
+    baseURL: process.env.API,
   },
   build: {
     extractCSS: true,
