@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   env: {
-    API: process.env.API,
+    API: process.env.WP_API,
   },
   build: {
     extend: (config) => {
