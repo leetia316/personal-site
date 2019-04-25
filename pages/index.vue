@@ -4,10 +4,10 @@
       aria-hidden="true"
       class="w-96 h-96 fill-current mb-24" />
     <h1 class="text-36 font-headline font-700 mb-24">
-      {{ headline }}
+      {{ res.headline }}
     </h1>
     <h2 class="max-w-640 leading-normal mb-24 text-16 font-400">
-      {{ content }}
+      {{ res.content }}
     </h2>
     <h3 class="pb-8 font-600">
       I am currently available for business opportunities!
@@ -43,12 +43,22 @@
 </template>
 
 <script>
+  import gql from 'graphql-tag'
+
   export default {
     name: 'Index',
-    async asyncData({ $axios }) {
-      const res = await $axios.$get('/singletons/38')
-      const { headline, content } = res.acf
-      return { headline, content }
+    apollo: {
+      res: {
+        query: gql`
+          {
+            homepage {
+              content
+              headline
+            }
+          }
+        `,
+        update: res => res.homepage[0],
+      },
     },
     head() {
       return {
