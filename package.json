@@ -5,12 +5,10 @@
   "author": "Matt Waler",
   "private": true,
   "scripts": {
-    "dev": "nuxt -c config/nuxt.config.js",
+    "dev": "nuxt -c config/nuxt.js",
     "functions": "netlify-lambda serve functions/src",
-    "gen": "netlify-lambda build functions/src && nuxt generate -c config/nuxt.config.js",
-    "sg": "vue-styleguidist server",
-    "sg:build": "vue-styleguidist build --config config/styleguide.config.js",
-    "start": "nuxt start -c config/nuxt.config.js",
+    "gen": "netlify-lambda build functions/src && nuxt generate -c config/nuxt.js",
+    "start": "nuxt start -c config/nuxt.js",
     "test": "jest -c=config/jest.config.js"
   },
   "dependencies": {
@@ -25,13 +23,11 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@fullhuman/postcss-purgecss": "^1.1.0",
-    "@nuxtjs/markdownit": "^1.2.3",
     "@vue/cli-plugin-babel": "^3.4.1",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
-    "css-loader": "^2.1.1",
     "dotenv": "^7.0.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -51,25 +47,7 @@
     "vue": "^2.6.7",
     "vue-jest": "^3.0.2",
     "vue-loader": "^15.7.0",
-    "vue-styleguidist": "^3.0.16",
     "vue-template-compiler": "^2.6.7",
     "webpack": "^4.29.5"
-  },
-  "babel": {
-    "env": {
-      "test": {
-        "presets": [
-          [
-            "@babel/preset-env",
-            {
-              "targets": {
-                "node": "current"
-              }
-            }
-          ],
-          "@nuxt/babel-preset-app"
-        ]
-      }
-    }
   }
 }

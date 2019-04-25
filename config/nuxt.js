@@ -1,19 +1,10 @@
 require('dotenv').config()
-const head = require('./head.config')
+
+const apollo = require('./apollo')
+const head = require('./head')
 
 module.exports = {
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: process.env.GQL_ENDPOINT,
-        httpLinkOptions: {
-          headers: {
-            token: process.env.GQL_TOKEN,
-          },
-        },
-      },
-    },
-  },
+  apollo,
   build: {
     extractCSS: true,
   },
