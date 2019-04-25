@@ -2,8 +2,17 @@ require('dotenv').config()
 const head = require('./head.config')
 
 module.exports = {
-  env: {
-    API: process.env.WP_API,
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.GQL_ENDPOINT,
+        httpLinkOptions: {
+          headers: {
+            token: process.env.GQL_TOKEN,
+          },
+        },
+      },
+    },
   },
   build: {
     extractCSS: true,
