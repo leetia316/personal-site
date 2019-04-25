@@ -2,8 +2,8 @@ require('dotenv').config()
 const head = require('./head.config')
 
 module.exports = {
-  axios: {
-    baseURL: process.env.API,
+  env: {
+    API: process.env.WP_API,
   },
   build: {
     extractCSS: true,
