@@ -5,13 +5,13 @@
   "author": "Matt Waler",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt -c config/nuxt.config.js",
     "functions": "netlify-lambda serve functions/src",
-    "gen": "netlify-lambda build functions/src && nuxt generate",
+    "gen": "netlify-lambda build functions/src && nuxt generate -c config/nuxt.config.js",
     "sg": "vue-styleguidist server",
-    "sg:build": "vue-styleguidist build",
-    "start": "nuxt start",
-    "test": "jest"
+    "sg:build": "vue-styleguidist build --config config/styleguide.config.js",
+    "start": "nuxt start -c config/nuxt.config.js",
+    "test": "jest -c=config/jest.config.js"
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.0-rc4",
@@ -53,5 +53,19 @@
     "vue-styleguidist": "^3.0.16",
     "vue-template-compiler": "^2.6.7",
     "webpack": "^4.29.5"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          ["@babel/preset-env", {
+            "targets": {
+              "node": "current"
+            }
+          }],
+          "@nuxt/babel-preset-app"
+        ]
+      }
+    }
   }
 }
