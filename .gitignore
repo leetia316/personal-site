@@ -5,3 +5,4 @@
 .styleguide
 functions/dist
 node_modules
+sw.*

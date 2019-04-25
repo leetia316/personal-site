@@ -22,6 +22,6 @@ module.exports = {
   head,
   loading: false,
   mode: 'universal',
-  modules: ['@nuxtjs/apollo', '@nuxtjs/dotenv', 'nuxt-svg-loader'],
+  modules: ['@nuxtjs/apollo', '@nuxtjs/dotenv', '@nuxtjs/pwa', 'nuxt-svg-loader'],
   plugins: ['~/plugins/globalComponents'],
 }
