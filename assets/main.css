@@ -1,34 +1,4 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-/* purgecss start ignore */
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  @apply font-sans text-16 text-gray-900 m-0 p-0;
-}
-
-a {
-  color: inherit;
-  &:hover {
-    @apply text-black;
-  }
-}
-
-.trans {
-  transition: all .2s ease;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-
-/* purgecss end ignore */
+@import 'styles/**/*.css';

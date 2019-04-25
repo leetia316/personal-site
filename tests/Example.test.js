@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Message from './Message.vue'
+import Example from '~/components/Example.vue'
 
-describe('Message', () => {
+describe('Example', () => {
   test('is a Vue instance', () => {
-    const wrapper = mount(Message)
+    const wrapper = mount(Example)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })
