@@ -1,16 +1,16 @@
 require('dotenv').config()
 
-const { GQL_TOKEN: envToken } = process.env
+const { GQL_TOKEN: TOKEN, GQL_ROLE: ROLE } = process.env
 
 exports.handler = async (event) => {
   const { token } = event.headers
 
-  if (token === envToken) {
+  if (token === TOKEN) {
     return {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Login successful.',
-        'x-hasura-role': 'authorized',
+        'x-hasura-role': ROLE,
       }),
     }
   } return {

@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt -c config/nuxt.js",
-    "functions": "netlify-lambda serve functions/src",
-    "gen": "netlify-lambda build functions/src && nuxt generate -c config/nuxt.js",
+    "functions": "netlify-lambda serve functions",
+    "gen": "netlify-lambda build functions && nuxt generate -c config/nuxt.js",
     "start": "nuxt start -c config/nuxt.js",
     "test": "jest -c=config/jest.config.js"
   },
