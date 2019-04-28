@@ -1,10 +1,8 @@
 require('dotenv').config()
 
-const apollo = require('./apollo')
 const head = require('./head')
 
 module.exports = {
-  apollo,
   build: {
     extractCSS: true,
   },
@@ -13,6 +11,12 @@ module.exports = {
   head,
   loading: false,
   mode: 'universal',
-  modules: ['@nuxtjs/apollo', '@nuxtjs/dotenv', '@nuxtjs/pwa', 'nuxt-svg-loader'],
-  plugins: ['~/plugins/globalComponents'],
+  modules: [
+    '@nuxtjs/dotenv',
+    '@nuxtjs/pwa',
+    'nuxt-svg-loader',
+  ],
+  plugins: [
+    '~/plugins/globalComponents',
+  ],
 }
