@@ -5,6 +5,7 @@
   "author": "Matt Waler",
   "private": true,
   "scripts": {
+    "analyze": "nuxt build -c config/nuxt.js -a",
     "dev": "nuxt -c config/nuxt.js",
     "functions": "netlify-lambda serve functions",
     "gen": "netlify-lambda build functions && nuxt generate -c config/nuxt.js",
