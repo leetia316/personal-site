@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { forEach } from 'lodash'
+import forEach from 'lodash/forEach'
 
 const components = require.context('~/components', false, /[A-Z]\w+\.(vue)$/)
 forEach(components.keys(), (fileName) => {
