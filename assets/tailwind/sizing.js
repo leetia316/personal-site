@@ -1,6 +1,6 @@
-const rem = require('./rem')
+import rem from './rem'
 
-module.exports = {
+export default {
   16: rem(16),
   24: rem(24),
   32: rem(32),

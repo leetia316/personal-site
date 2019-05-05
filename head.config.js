@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   link: [
     { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
     { rel: 'apple-touch-icon-precomposed', sizes: '57x57', href: 'icons/apple-touch-icon-57x57.png' },

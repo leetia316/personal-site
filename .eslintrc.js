@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb-base', 'plugin:vue/recommended', 'plugin:jest/recommended'],
+  extends: ['airbnb-base', 'plugin:vue/recommended'],
   overrides: [{
     files: ['*.vue'],
     rules: {

@@ -1,8 +1,6 @@
-require('dotenv').config()
+import head from './head.config'
 
-const head = require('./head')
-
-module.exports = {
+export default {
   build: {
     extractCSS: true,
   },

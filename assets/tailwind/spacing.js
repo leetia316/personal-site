@@ -1,6 +1,6 @@
-const rem = require('./rem')
+import rem from './rem'
 
-module.exports = {
+export default {
   auto: 'auto',
   0: '0',
   4: rem(4),
