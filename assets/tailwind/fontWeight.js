@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   100: 100,
   200: 200,
   300: 300,
