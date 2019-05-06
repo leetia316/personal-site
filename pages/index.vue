@@ -44,10 +44,11 @@
 
 <script>
   import axios from 'axios'
+  import identity from 'netlify-identity-widget'
 
   export default {
     name: 'Index',
-    async asyncData() {
+    asyncData: async () => {
       const res = await axios({
         method: 'post',
         url: process.env.GQL_ENDPOINT,
@@ -66,10 +67,11 @@
       const { headline, content } = res.data.data.homepage[0]
       return { headline, content }
     },
-    head() {
-      return {
-        title: 'Matt Waler | Frontend Developer',
-      }
+    head: () => ({
+      title: 'Matt Waler | Frontend Developer',
+    }),
+    mounted: () => {
+      identity.init()
     },
   }
 </script>

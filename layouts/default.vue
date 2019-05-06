@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    mounted() {
+    mounted: () => {
       const divs = [
         document.querySelector('#__nuxt'),
         document.querySelector('#__layout'),
