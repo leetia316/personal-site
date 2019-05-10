@@ -44,7 +44,6 @@
 
 <script>
   import axios from 'axios'
-  import identity from 'netlify-identity-widget'
 
   export default {
     name: 'Index',
@@ -70,8 +69,5 @@
     head: () => ({
       title: 'Matt Waler | Frontend Developer',
     }),
-    mounted: () => {
-      identity.init()
-    },
   }
 </script>

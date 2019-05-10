@@ -1,7 +1,7 @@
-const fontSize = require('./assets/tailwind/fontSize')
-const fontWeight = require('./assets/tailwind/fontWeight')
-const sizing = require('./assets/tailwind/sizing')
-const spacing = require('./assets/tailwind/spacing')
+const fontSize = require('./config/fontSize')
+const fontWeight = require('./config/fontWeight')
+const sizing = require('./config/sizing')
+const spacing = require('./config/spacing')
 
 module.exports = {
   prefix: '',
