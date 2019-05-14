@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 8,
     sourceType: "module",
   },
-  plugins: ['import', 'jest', 'node', 'promise'],
+  plugins: ['import', 'node', 'promise'],
   rules: {
     'global-require': 'off',
     'import/no-extraneous-dependencies': 'off',
