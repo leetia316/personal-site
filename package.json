@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "analyze": "nuxt build -a",
-    "prebuild": "rm -r .build .functions",
     "build": "netlify-lambda build functions && nuxt generate",
     "dev": "parallelshell 'nuxt' 'yarn watch' 'yarn functions'",
     "functions": "netlify-lambda serve functions",
