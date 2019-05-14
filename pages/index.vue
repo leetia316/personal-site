@@ -51,9 +51,6 @@
       const res = await axios({
         method: 'post',
         url: process.env.GQL_ENDPOINT,
-        headers: {
-          token: process.env.GQL_TOKEN,
-        },
         data: {
           query: `{
             homepage {

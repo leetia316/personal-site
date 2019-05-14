@@ -6,3 +6,4 @@
 .styleguide
 node_modules
 sw.*
+yarn-error.log
