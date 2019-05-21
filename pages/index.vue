@@ -50,7 +50,7 @@
     asyncData: async () => {
       const res = await axios({
         method: 'post',
-        url: process.env.GQL_ENDPOINT,
+        url: process.env.API,
         data: {
           query: `{
             homepage {

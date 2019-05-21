@@ -5,6 +5,9 @@ export default {
     extractCSS: true,
   },
   css: ['~/assets/tailwind/tailwind.css'],
+  env: {
+    API: process.env.API,
+  },
   generate: { dir: '.build' },
   head,
   loading: false,
