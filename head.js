@@ -19,10 +19,7 @@ export default {
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    {
-      name: 'description',
-      content: 'I am a Frontend Developer that builds highly pragmatic and performant websites.',
-    },
+    { name: 'description', content: 'I am a Frontend Developer that builds highly pragmatic and performant websites.' },
     { name: 'application-name', content: 'Matt Waler\'s Portfolio Site.' },
     { name: 'msapplication-TileColor', content: '#FFFFFF' },
     { name: 'msapplication-config', content: '/browserconfig.xml' },

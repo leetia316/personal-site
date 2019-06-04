@@ -1,14 +1,16 @@
-import head from './assets/config/head'
+import head from './head'
 
 export default {
   build: {
     extractCSS: true,
   },
-  css: ['~/assets/tailwind/tailwind.css'],
+  css: ['~/tailwind/tailwind.css'],
   env: {
     API: process.env.API,
   },
-  generate: { dir: '.build' },
+  generate: {
+    dir: '.build',
+  },
   head,
   loading: false,
   mode: 'universal',

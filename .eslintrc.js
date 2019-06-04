@@ -6,13 +6,7 @@ module.exports = {
       indent: 'off'
     }
   }],
-  parser: "vue-eslint-parser",
-  parserOptions: {
-    parser: "babel-eslint",
-    ecmaVersion: 8,
-    sourceType: "module",
-  },
-  plugins: ['import', 'node', 'promise'],
+  plugins: ['import', 'node', 'promise', 'vue'],
   rules: {
     'global-require': 'off',
     'import/no-extraneous-dependencies': 'off',

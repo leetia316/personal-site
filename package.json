@@ -5,10 +5,9 @@
   "author": "Matt Waler",
   "private": true,
   "scripts": {
-    "analyze": "nuxt build -a",
-    "build": "nuxt generate",
-    "dev": "concurrently -r 'nuxt' 'yarn watch'",
-    "watch": "watch 'node assets/config/styles' assets/styles --interval=1"
+    "analyze": "nuxt build -a -c nuxt.js",
+    "build": "nuxt generate -c nuxt.js",
+    "dev": "nuxt -c nuxt.js"
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.3.0",
@@ -20,8 +19,6 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
-    "babel-eslint": "^10.0.1",
-    "concurrently": "^4.1.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
@@ -33,7 +30,6 @@
     "postcss-easy-import": "^3.0.0",
     "postcss-easy-media-query": "^1.0.0",
     "postcss-nested": "^4.1.2",
-    "tailwindcss": "^1.0.0-beta.3",
-    "watch": "^1.0.2"
+    "tailwindcss": "^1.0.0-beta.3"
   }
 }

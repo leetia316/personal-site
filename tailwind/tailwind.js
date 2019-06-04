@@ -23,7 +23,6 @@ module.exports = {
     minWidth: sizing,
     padding: spacing,
     margin: spacing,
-    negativeMargin: spacing,
   },
   corePlugins: {
     container: false,
