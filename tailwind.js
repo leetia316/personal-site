@@ -61,7 +61,7 @@ const margin = {
   ...remSpacingNegative,
 }
 
-module.exports = {
+const config = {
   prefix: '',
   important: false,
   separator: ':',
@@ -87,3 +87,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+module.exports = config

@@ -1,20 +1,35 @@
+const appleIconSizes = [57, 60, 72, 76, 114, 120, 144, 152]
+let appleIcons = []
+appleIconSizes.forEach((size) => {
+  appleIcons = [
+    ...appleIcons,
+    {
+      rel: 'apple-touch-icon-precomposed',
+      sizes: `${size}x${size}`,
+      href: `icons/apple-touch-icon-${size}x${size}.png`,
+    },
+  ]
+})
+
+const faviconSizes = [16, 32, 96, 128, 196]
+let favicons = []
+faviconSizes.forEach((size) => {
+  favicons = [
+    ...favicons,
+    {
+      rel: 'icon',
+      sizes: `${size}x${size}`,
+      href: `icons/favicon-${size}x${size}.png`,
+    },
+  ]
+})
+
 export default {
   link: [
     { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '57x57', href: 'icons/apple-touch-icon-57x57.png' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '114x114', href: 'icons/apple-touch-icon-114x114.png' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '72x72', href: 'icons/apple-touch-icon-72x72.png' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '144x144', href: 'icons/apple-touch-icon-144x144.png' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '60x60', href: 'icons/apple-touch-icon-60x60.png' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '120x120', href: 'icons/apple-touch-icon-120x120.png' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '76x76', href: 'icons/apple-touch-icon-76x76.png' },
-    { rel: 'apple-touch-icon-precomposed', sizes: '152x152', href: 'icons/apple-touch-icon-152x152.png' },
-    { rel: 'icon', href: 'icons/favicon-196x196.png', sizes: '196x196' },
-    { rel: 'icon', href: 'icons/favicon-96x96.png', sizes: '96x96' },
-    { rel: 'icon', href: 'icons/favicon-32x32.png', sizes: '32x32' },
-    { rel: 'icon', href: 'icons/favicon-16x16.png', sizes: '16x16' },
-    { rel: 'icon', href: 'icons/favicon-128.png', sizes: '128x128' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins:400,700' },
+    ...favicons,
+    ...appleIcons,
   ],
   meta: [
     { charset: 'utf-8' },
