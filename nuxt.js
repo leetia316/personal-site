@@ -4,7 +4,7 @@ export default {
   build: {
     extractCSS: true,
   },
-  css: ['~/tailwind/tailwind.css'],
+  css: ['~/assets/tailwind.css'],
   env: {
     API: process.env.API,
   },
