@@ -21,8 +21,7 @@ remSizes.forEach((size) => {
 const percentSizes = [20, 25, 33, 40, 50, 60, 66, 75, 80, 100]
 const percentSize = {}
 percentSizes.forEach((percent) => {
-  const toPercent = `${percent}%`
-  percentSize[toPercent] = toPercent
+  percentSize[`${percent}%`] = `${percent}%`
 })
 
 const viewportSizes = [25, 50, 75, 100]
