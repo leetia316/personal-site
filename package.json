@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "analyze": "nuxt build -a -c nuxt.js",
-    "build": "nuxt generate -c nuxt.js",
+    "build": "MODE=prod nuxt generate -c nuxt.js",
     "dev": "nuxt -c nuxt.js",
     "test": "jest"
   },
@@ -21,7 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "@fullhuman/postcss-purgecss": "https://github.com/mattwaler/postcss-purgecss",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",

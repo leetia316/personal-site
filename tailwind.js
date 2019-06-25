@@ -39,7 +39,7 @@ remSpacingsNegatives.forEach((spacing) => {
 const screenSizes = [320, 480, 640, 768, 960, 1024, 1280, 1366]
 const screens = {}
 screenSizes.forEach((screen) => {
-  screens[screen] = screen
+  screens[`${screen}`] = `${screen}px`
 })
 
 const viewportSizes = [25, 50, 75, 100]
