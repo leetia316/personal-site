@@ -12,30 +12,17 @@ fontWeights.forEach((font) => {
   fontWeight[font] = font
 })
 
-const remSizes = [16, 24, 32, 48, 64, 96, 128, 256, 320, 480, 640, 768, 960, 1280, 1440, 1600]
-const remSize = {}
-remSizes.forEach((size) => {
-  remSize[size] = rem(size)
-})
-
 const percentSizes = [20, 25, 33, 40, 50, 60, 66, 75, 80, 100]
 const percentSize = {}
 percentSizes.forEach((percent) => {
   percentSize[`${percent}%`] = `${percent}%`
 })
 
-const viewportSizes = [25, 50, 75, 100]
-const viewportSize = {}
-viewportSizes.forEach((size) => {
-  viewportSize[`${size}vw`] = `${size}vw`
-  viewportSize[`${size}vh`] = `${size}vh`
+const remSizes = [16, 24, 32, 48, 64, 96, 128, 256, 320, 480, 640, 768, 960, 1280, 1440, 1600]
+const remSize = {}
+remSizes.forEach((size) => {
+  remSize[size] = rem(size)
 })
-
-const sizing = {
-  ...remSize,
-  ...percentSize,
-  ...viewportSize,
-}
 
 const remSpacings = [4, 8, 12, 16, 18, 20, 24, 32, 40, 48, 56, 64, 80, 96]
 const remSpacing = {}
@@ -49,9 +36,28 @@ remSpacingsNegatives.forEach((spacing) => {
   remSpacingNegative[spacing] = rem(spacing)
 })
 
+const screenSizes = [320, 480, 640, 768, 960, 1024, 1280, 1366]
+const screens = {}
+screenSizes.forEach((screen) => {
+  screens[screen] = screen
+})
+
+const viewportSizes = [25, 50, 75, 100]
+const viewportSize = {}
+viewportSizes.forEach((size) => {
+  viewportSize[`${size}vw`] = `${size}vw`
+  viewportSize[`${size}vh`] = `${size}vh`
+})
+
+const sizing = {
+  ...percentSize,
+  ...remSize,
+  ...viewportSize,
+}
+
 const spacing = {
-  auto: 'auto',
   0: '0',
+  auto: 'auto',
   ...remSpacing,
 }
 
@@ -61,8 +67,12 @@ const margin = {
 }
 
 const config = {
-  prefix: '',
+  corePlugins: {
+    container: false,
+  },
   important: false,
+  plugins: [],
+  prefix: '',
   separator: ':',
   theme: {
     extend: {
@@ -73,18 +83,15 @@ const config = {
     fontSize,
     fontWeight,
     height: sizing,
-    width: sizing,
+    margin,
     maxHeight: sizing,
     maxWidth: sizing,
     minHeight: sizing,
     minWidth: sizing,
     padding: spacing,
-    margin,
+    screens,
+    width: sizing,
   },
-  corePlugins: {
-    container: false,
-  },
-  plugins: [],
 }
 
 module.exports = config

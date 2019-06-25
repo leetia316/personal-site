@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-100vh md:h-100vh justify-center sm:items-center sm:text-center px-24">
+  <div class="flex flex-col min-h-100vh 768:h-100vh justify-center 640:items-center 640:text-center px-24">
     <Logo
       aria-hidden="true"
       class="w-96 h-96 fill-current mb-24" />
@@ -24,19 +24,19 @@
         title="LinkedIn"
         target="_blank"
         href="https://www.linkedin.com/in/matthewwaler/">
-        <LinkedIn class="w-32 mr-16 sm:m-16 trans" />
+        <LinkedIn class="w-32 mr-16 640:m-16 trans" />
       </a>
       <a
         title="GitHub"
         target="_blank"
         href="https://github.com/mattwaler">
-        <GitHub class="w-32 mr-16 sm:m-16 trans" />
+        <GitHub class="w-32 mr-16 640:m-16 trans" />
       </a>
       <a
         title="Dev.to"
         target="_blank"
         href="https://dev.to/mattwaler">
-        <Dev class="w-32 mr-16 sm:m-16 trans" />
+        <Dev class="w-32 mr-16 640:m-16 trans" />
       </a>
     </div>
   </div>
