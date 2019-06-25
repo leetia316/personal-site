@@ -5,8 +5,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   ],
   defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 })
-const { MODE } = process.env
-const isProd = MODE === 'prod'
+const MODE = process.env.NODE_ENV === 'production'
 
 module.exports = {
   plugins: [
@@ -15,7 +14,7 @@ module.exports = {
     require('postcss-easy-media-query'),
     require('postcss-nested'),
     require('autoprefixer'),
-    ...isProd
+    ...MODE
     ? [purgecss, require('postcss-clean')]
     : [],
   ],
