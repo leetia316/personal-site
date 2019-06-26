@@ -12,8 +12,14 @@ fontWeights.forEach((font) => {
   fontWeight[font] = font
 })
 
-const percentSizes = [20, 25, 33, 40, 50, 60, 66, 75, 80, 100]
-const percentSize = {}
+const percentSizes = [20, 25, 40, 50, 60, 75, 80, 100]
+const percentSize = {
+  '12%': 'calc(100% * (1/8))',
+  '16%': 'calc(100% * (1/6))',
+  '17%': 'calc(100% * (1/7))',
+  '33%': 'calc(100% * (1/3))',
+  '66%': 'calc(100% * (2/3))',
+}
 percentSizes.forEach((percent) => {
   percentSize[`${percent}%`] = `${percent}%`
 })
