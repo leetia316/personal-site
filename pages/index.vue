@@ -1,67 +1,72 @@
 <template>
-  <div class="flex flex-col min-h-100vh 768:h-100vh justify-center 640:items-center 640:text-center px-24">
-    <Logo
-      aria-hidden="true"
-      class="w-96 h-96 fill-current mb-24" />
-    <h1 class="text-36 font-headline font-700 mb-24">
-      {{ headline }}
-    </h1>
-    <h2 class="max-w-640 leading-normal mb-24 text-16 font-400">
-      {{ content }}
-    </h2>
-    <h3 class="pb-8 font-600">
-      I am currently available for business opportunities!
-    </h3>
-    <a
-      class="mb-24 underline"
-      href="mailto:contact@mattwaler.com">
-      Shoot me an email!
-    </a>
+  <div role="presentation">
     <div
-      class="flex items-center"
-      role="presentation">
+      role="presentation"
+      class="w-100% h-16 bg-blue-700" />
+    <header class="flex justify-between items-center max-w-1080 mx-auto py-64">
+      <!-- Logo -->
       <a
-        title="LinkedIn"
-        target="_blank"
-        href="https://www.linkedin.com/in/matthewwaler/">
-        <LinkedIn class="w-32 mr-16 640:m-16 trans" />
+        href="/"
+        class="flex items-center">
+        <Logo class="w-48" />
+        <div class="text-24 flex pl-8">
+          <span class="">matt</span>
+          <span class="font-700">waler</span>
+        </div>
       </a>
-      <a
-        title="GitHub"
-        target="_blank"
-        href="https://github.com/mattwaler">
-        <GitHub class="w-32 mr-16 640:m-16 trans" />
-      </a>
-      <a
-        title="Dev.to"
-        target="_blank"
-        href="https://dev.to/mattwaler">
-        <Dev class="w-32 mr-16 640:m-16 trans" />
-      </a>
+      <!-- Nav Items -->
+      <nav class="text-20 text-gray-600">
+        <a
+          class="px-12"
+          target="_blank"
+          href="https://github.com/mattwaler">Github</a>
+        <a
+          class="px-12"
+          target="_blank"
+          href="https://www.linkedin.com/in/matthewwaler/">LinkedIn</a>
+        <a
+          class="px-12"
+          target="_blank"
+          href="/MattWaler.pdf">Resume</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <div class="flex items-center max-w-1080 mx-auto py-64">
+      <div class="w-66% pr-24">
+        <h1 class="text-48 leading-none pb-8">
+          I'm a <b>pragmatic web developer</b> that wears many hats.
+        </h1>
+        <p class="pb-32">
+          ... metaphorically. I look <span class="uppercase font-700 italic">really</span> bad in hats.
+        </p>
+        <a
+          class="inline-block bg-blue-700 uppercase font-700 text-white py-16 px-32 rounded"
+          href="">Contact Me</a>
+        <a
+          class="ml-24 inline-block bg-gray-200 uppercase font-700 py-16 px-32 rounded"
+          href="">View my Resume</a>
+        <div class="flex items-center pt-64">
+          <Checked class="w-32 text-green-400 fill-current" />
+          <p class="uppercase text-20 text-gray-600 tracking-wide pl-12">
+            Currently available for freelance & consulting
+          </p>
+        </div>
+      </div>
+      <div class="w-33% pl-24">
+        <img
+          src="~/assets/HannahAndEmily.jpg"
+          alt="My sisters, Hannah and Emily.">
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  import axios from 'axios'
-
   export default {
     name: 'Index',
     asyncData: async () => {
-      const res = await axios({
-        method: 'post',
-        url: process.env.API,
-        data: {
-          query: `{
-            homepage {
-              content
-              headline
-            }
-          }`,
-        },
-      })
-      const { headline, content } = res.data.data.homepage[0]
-      return { headline, content }
+      console.log(process.client)
     },
     head: () => ({
       title: 'Matt Waler | Frontend Developer',

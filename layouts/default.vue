@@ -1,5 +1,7 @@
 <template>
-  <nuxt role="presentation" />
+  <nuxt
+    class="text-gray-900 font-sans"
+    role="presentation" />
 </template>
 
 <script>
