@@ -1,9 +1,9 @@
 <template>
-  <div role="presentation">
+  <div
+    role="presentation"
+    class="text-gray-900 font-sans">
     <TheHeader />
-    <nuxt
-      class="text-gray-900 font-sans"
-      role="presentation" />
+    <nuxt role="presentation" />
   </div>
 </template>
 

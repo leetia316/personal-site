@@ -3,7 +3,7 @@
     <div
       role="presentation"
       class="w-100% h-16 bg-blue-700" />
-    <header class="flex justify-between items-center max-w-1080 mx-auto py-48 px-16">
+    <header class="flex justify-between items-center max-w-1080 mx-auto pt-48 px-24">
       <!-- Logo -->
       <a
         href="/"
@@ -17,17 +17,11 @@
       <!-- Nav Items -->
       <nav class="text-20 text-gray-600">
         <a
-          class="px-12"
+          v-for="item in links"
+          :key="item.text"
+          class="ml-48 hover:text-black"
           target="_blank"
-          href="https://github.com/mattwaler">github</a>
-        <a
-          class="px-12"
-          target="_blank"
-          href="https://www.linkedin.com/in/matthewwaler/">linkedin</a>
-        <a
-          class="px-12"
-          target="_blank"
-          href="/MattWaler.pdf">resume</a>
+          :href="item.link">{{ item.text }}</a>
       </nav>
     </header>
   </div>
@@ -36,5 +30,14 @@
 <script>
   export default {
     name: 'Header',
+    data() {
+      return {
+        links: [
+          { text: 'Github', link: 'https://github.com/mattwaler' },
+          { text: 'LinkedIn', link: 'https://www.linkedin.com/in/matthewwaler/' },
+          { text: 'Resume', link: '/MattWaler.pdf' },
+        ],
+      }
+    },
   }
 </script>
