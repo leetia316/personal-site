@@ -41,7 +41,7 @@
         if (this.secondary) {
           return 'bg-gray-200'
         }
-        return 'bg-blue-700 text-white'
+        return 'bg-deep-blue text-white'
       },
     },
   }

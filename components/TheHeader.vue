@@ -2,7 +2,7 @@
   <div role="presentation">
     <div
       role="presentation"
-      class="w-100% h-16 bg-blue-700" />
+      class="w-100% h-16 bg-deep-blue" />
     <header class="flex justify-between items-center max-w-1080 mx-auto pt-48 px-24">
       <!-- Logo -->
       <a

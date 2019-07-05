@@ -1,3 +1,7 @@
+// Colors
+const colors = {
+  'deep-blue': '#0068A7',
+}
 // Font Stuff
 const fontSizes = [14, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96]
 const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]
@@ -86,6 +90,11 @@ const config = {
   prefix: '',
   separator: ':',
   theme: {
+    extend: {
+      colors: {
+        ...colors,
+      },
+    },
     fontSize,
     fontWeight,
     height: sizing,
