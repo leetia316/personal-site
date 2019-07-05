@@ -1,7 +1,7 @@
 <template>
   <div
     role="presentation"
-    class="text-gray-900 font-sans">
+    class="text-gray-900 font-roboto">
     <TheHeader />
     <nuxt role="presentation" />
   </div>

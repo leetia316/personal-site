@@ -91,6 +91,9 @@ const config = {
   separator: ':',
   theme: {
     extend: {
+      fontFamily: {
+        roboto: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+      },
       colors: {
         ...colors,
       },
