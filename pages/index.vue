@@ -32,14 +32,22 @@
       </div>
     </div>
     <Waves class="w-100%" />
-    <div class="bg-deep-blue py-36 px-24 flex flex-wrap text-white">
-      <div class="w-100% 768:w-33%">
-        <h2 class="uppercase font-700 text-24">
-          Frontend Development
-        </h2>
-        <p class="font-300">
-          I can turn any design into a web app. I prefer Vue.js and PostCSS, but know my way around Node, ES6, and plenty of other modern frontend tooling.
-        </p>
+    <div class="bg-deep-blue w-100% text-white">
+      <div class="max-w-1280 mx-auto py-36 px-24 flex flex-wrap">
+        <div
+          v-for="(item, index) in 3"
+          :key="index"
+          class="w-100% 960:w-33% px-24 py-48 flex">
+          <Frontend class="text-sea-green fill-current w-32 h-32 flex-none" />
+          <div class="flex-1 pl-16">
+            <h2 class="uppercase tracking-wide font-700 text-24">
+              Frontend Development
+            </h2>
+            <p class="font-300">
+              I can turn any design into a web app. I prefer Vue.js and PostCSS, but know my way around Node, ES6, and plenty of other modern frontend tooling.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </main>

@@ -1,6 +1,7 @@
 // Colors
 const colors = {
   'deep-blue': '#0068A7',
+  'sea-green': '#1ACCAC',
 }
 // Font Stuff
 const fontSizes = [14, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96]
