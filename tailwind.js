@@ -4,6 +4,9 @@ const colors = {
   'sea-green': '#1ACCAC',
 }
 // Font Stuff
+const fontFamily = {
+  roboto: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+}
 const fontSizes = [14, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96]
 const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 const percentSizes = [20, 25, 40, 50, 60, 75, 80, 100]
@@ -92,12 +95,8 @@ const config = {
   separator: ':',
   theme: {
     extend: {
-      fontFamily: {
-        roboto: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-      },
-      colors: {
-        ...colors,
-      },
+      fontFamily,
+      colors,
     },
     fontSize,
     fontWeight,
