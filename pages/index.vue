@@ -38,7 +38,7 @@
     <div class="bg-deep-blue w-100% text-white">
       <div class="max-w-1280 mx-auto py-36 px-24 flex flex-wrap">
         <article
-          v-for="(item, index) in content"
+          v-for="(item, index) in homepage.skills"
           :key="index"
           class="w-100% 960:w-33% p-24 flex">
           <component
@@ -48,9 +48,9 @@
             <h2 class="uppercase tracking-wider font-700 text-20 leading-none pb-8">
               {{ item.headline }}
             </h2>
-            <p class="font-300">
-              {{ item.paragraph }}
-            </p>
+            <div
+              class="font-300"
+              v-html="item.paragraph" />
           </div>
         </article>
       </div>
@@ -63,15 +63,17 @@
   import TheButton from '~/components/TheButton.vue'
   import axios from 'axios'
 
-  const query = `{
-    homepage {
-      skills {
-        headline
-        icon
-        paragraph
+  const query = `
+    {
+      homepage {
+        skills {
+          headline
+          paragraph(markdown: true)
+          icon
+        }
       }
     }
-  }`
+  `
 
   export default {
     name: 'Index',
@@ -98,7 +100,8 @@
         },
         data: { query },
       })
-      return api.data.data
+      const content = api.data.data
+      return content
     },
     head: () => ({
       title: 'Matt Waler | Frontend Developer',
