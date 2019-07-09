@@ -5,14 +5,17 @@ import tailwind from './tailwind'
 
 const config = resolveConfig(tailwind)
 
+const { API, TOKEN } = process.env
+
 export default {
   build: {
     extractCSS: true,
   },
   css: ['~/assets/tailwind.css'],
   env: {
-    API: process.env.API,
+    API,
     tailwind: config,
+    TOKEN,
   },
   generate: {
     dir: '.build',

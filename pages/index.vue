@@ -61,6 +61,17 @@
 <script>
   import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
+  import axios from 'axios'
+
+  const query = `{
+    homepage {
+      skills {
+        headline
+        icon
+        paragraph
+      }
+    }
+  }`
 
   export default {
     name: 'Index',
@@ -78,7 +89,16 @@
       }
     },
     asyncData: async () => {
-      console.warn(process.client)
+      const api = await axios(process.env.API, {
+        method: 'post',
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${process.env.TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+        data: { query },
+      })
+      return api.data.data
     },
     head: () => ({
       title: 'Matt Waler | Frontend Developer',
