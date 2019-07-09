@@ -31,10 +31,13 @@
           alt="My sisters, Hannah and Emily.">
       </div>
     </div>
-    <Waves class="w-100%" />
+    <div class="w-100% relative">
+      <Waves class="w-100%" />
+      <div class="w-100% absolute bottom-0 bg-deep-blue h-2" />
+    </div>
     <div class="bg-deep-blue w-100% text-white">
       <div class="max-w-1280 mx-auto py-36 px-24 flex flex-wrap">
-        <div
+        <article
           v-for="(item, index) in content"
           :key="index"
           class="w-100% 960:w-33% p-24 flex">
@@ -42,14 +45,14 @@
             :is="item.icon"
             class="text-sea-green fill-current w-32 h-32 flex-none" />
           <div class="flex-1 pl-16">
-            <h2 class="uppercase tracking-wide font-700 text-24 leading-none pb-16">
+            <h2 class="uppercase tracking-wider font-700 text-20 leading-none pb-8">
               {{ item.headline }}
             </h2>
             <p class="font-300">
               {{ item.paragraph }}
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </main>
@@ -64,28 +67,18 @@
     components: { TheButton },
     setup() {
       const content = value([
-        {
-          icon: 'Frontend',
-          headline: 'Frontend Development',
-          paragraph: 'I can turn any design into a web app. I prefer Vue.js and PostCSS, but know my way around Node, ES6, and plenty of other modern frontend tooling.',
-        },
-        {
-          icon: 'Backend',
-          headline: 'Backend Development',
-          paragraph: 'I use modern backend solutions like Headless CMSs and Static Site Generation to deploy lean and secure builds to Global CDNs.',
-        },
-        {
-          icon: 'Design',
-          headline: 'Responsive Design & UX',
-          paragraph: 'While it is not my primary focus, I can whip up  low-fidelity wireframes, and iterate them into full-fledged designs. I designed this very site!',
-        },
+        /* eslint-disable */
+        { icon: 'Frontend', headline: 'Frontend Development', paragraph: 'I can turn any design into a web app. I prefer Vue.js and PostCSS, but know my way around Node, ES6, and plenty of other modern frontend tooling.' },
+        { icon: 'Backend', headline: 'Backend Development', paragraph: 'I use modern backend solutions like Headless CMSs and Static Site Generation to deploy lean and secure builds to Global CDNs.' },
+        { icon: 'Design', headline: 'Responsive Design & UX', paragraph: 'While it is not my primary focus, I can whip up  low-fidelity wireframes, and iterate them into full-fledged designs. I designed this very site!' },
+        /* eslint-enable */
       ])
       return {
         content,
       }
     },
     asyncData: async () => {
-      console.log(process.client)
+      console.warn(process.client)
     },
     head: () => ({
       title: 'Matt Waler | Frontend Developer',

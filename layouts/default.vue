@@ -3,7 +3,7 @@
     role="presentation"
     class="text-gray-900 font-roboto">
     <TheHeader />
-    <nuxt role="presentation" />
+    <nuxt />
   </div>
 </template>
 
@@ -11,14 +11,12 @@
   import TheHeader from '~/components/TheHeader.vue'
 
   export default {
+    name: 'DefaultLayout',
     components: {
       TheHeader,
     },
     mounted: () => {
-      const divs = [
-        document.querySelector('#__nuxt'),
-        document.querySelector('#__layout'),
-      ]
+      const divs = Array.from(document.querySelectorAll('div'))
       divs.forEach(div => div.setAttribute('role', 'presentation'))
       document.querySelector('body').setAttribute('title', 'Page content')
     },
