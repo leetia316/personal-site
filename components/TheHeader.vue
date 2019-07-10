@@ -15,11 +15,11 @@
         </div>
       </a>
       <!-- Nav Items -->
-      <nav class="text-20 text-gray-600">
+      <nav class="text-gray-600">
         <a
           v-for="item in links"
           :key="item.text"
-          class="ml-48 hover:text-black"
+          class="ml-32 hover:text-black font-700 uppercase tracking-wide trans"
           target="_blank"
           :href="item.link">{{ item.text }}</a>
       </nav>
@@ -28,15 +28,18 @@
 </template>
 
 <script>
+  import { value } from 'vue-function-api'
+
   export default {
     name: 'Header',
-    data() {
+    setup() {
+      const links = value([
+        { text: 'Github', link: 'https://github.com/mattwaler' },
+        { text: 'LinkedIn', link: 'https://www.linkedin.com/in/matthewwaler/' },
+        { text: 'Resume', link: '/MattWaler.pdf' },
+      ])
       return {
-        links: [
-          { text: 'Github', link: 'https://github.com/mattwaler' },
-          { text: 'LinkedIn', link: 'https://www.linkedin.com/in/matthewwaler/' },
-          { text: 'Resume', link: '/MattWaler.pdf' },
-        ],
+        links,
       }
     },
   }

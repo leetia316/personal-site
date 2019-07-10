@@ -1,3 +1,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+b, strong {
+  @apply font-700;
+}
+
+.trans {
+  transition: all .2s ease;
+}
