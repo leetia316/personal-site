@@ -1,11 +1,11 @@
+import dotenv from 'dotenv'
 import resolveConfig from 'tailwindcss/resolveConfig'
-
 import head from './head'
-import tailwind from './tailwind'
+import tailwindConfig from './tailwind'
 
-const config = resolveConfig(tailwind)
-
+dotenv.config()
 const { API, TOKEN } = process.env
+const tailwind = resolveConfig(tailwindConfig)
 
 export default {
   build: {
@@ -14,7 +14,7 @@ export default {
   css: ['~/assets/tailwind.css'],
   env: {
     API,
-    tailwind: config,
+    tailwind,
     TOKEN,
   },
   generate: {
@@ -27,7 +27,6 @@ export default {
   },
   mode: 'universal',
   modules: [
-    '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
   ],

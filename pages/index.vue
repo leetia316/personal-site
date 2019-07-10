@@ -59,9 +59,8 @@
 </template>
 
 <script>
-  import { value } from 'vue-function-api'
-  import TheButton from '~/components/TheButton.vue'
   import axios from 'axios'
+  import TheButton from '~/components/TheButton.vue'
 
   const query = `
     {
@@ -78,18 +77,7 @@
   export default {
     name: 'Index',
     components: { TheButton },
-    setup() {
-      const content = value([
-        /* eslint-disable */
-        { icon: 'Frontend', headline: 'Frontend Development', paragraph: 'I can turn any design into a web app. I prefer Vue.js and PostCSS, but know my way around Node, ES6, and plenty of other modern frontend tooling.' },
-        { icon: 'Backend', headline: 'Backend Development', paragraph: 'I use modern backend solutions like Headless CMSs and Static Site Generation to deploy lean and secure builds to Global CDNs.' },
-        { icon: 'Design', headline: 'Responsive Design & UX', paragraph: 'While it is not my primary focus, I can whip up  low-fidelity wireframes, and iterate them into full-fledged designs. I designed this very site!' },
-        /* eslint-enable */
-      ])
-      return {
-        content,
-      }
-    },
+    setup() {},
     asyncData: async () => {
       const api = await axios(process.env.API, {
         method: 'post',
