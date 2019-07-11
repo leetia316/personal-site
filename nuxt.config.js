@@ -6,9 +6,9 @@ import tailwindConfig from './tailwind'
 
 dotenv.config()
 const { API, TOKEN } = process.env
-const tailwind = resolveConfig(tailwindConfig)
 const MODE = process.env.NODE_ENV === 'production'
 
+const tailwind = resolveConfig(tailwindConfig)
 purge({
   content: [
     './**/*.html',
