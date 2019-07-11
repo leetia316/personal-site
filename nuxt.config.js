@@ -1,36 +1,17 @@
 import dotenv from 'dotenv'
 import resolveConfig from 'tailwindcss/resolveConfig'
-import purge from '@fullhuman/postcss-purgecss'
 import head from './head'
 import tailwindConfig from './tailwind'
+import postcss from './postcss'
 
 dotenv.config()
 const { API, TOKEN } = process.env
-const MODE = process.env.NODE_ENV === 'production'
-
 const tailwind = resolveConfig(tailwindConfig)
-purge({
-  content: [
-    './**/*.html',
-    './**/*.vue',
-  ],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/%]+/g) || [],
-})
 
 export default {
   build: {
     extractCSS: true,
-    postcss: {
-      plugins: {
-        'postcss-easy-import': true,
-        tailwindcss: './tailwind.js',
-        'postcss-nested': true,
-        autoprefixer: true,
-        ...MODE
-          ? [purge, 'postcss-clean']
-          : [],
-      },
-    },
+    postcss,
   },
   css: ['~/assets/tailwind.css'],
   env: {
