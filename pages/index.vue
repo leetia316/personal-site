@@ -1,7 +1,5 @@
 <template>
-  <!-- eslint-disable-next-line -->
   <main>
-
     <!-- Hero Section -->
     <div class="flex flex-wrap-reverse items-center max-w-1080 mx-auto py-48 768:py-96 px-24">
       <div class="w-100% 768:w-66% 768:pr-24">

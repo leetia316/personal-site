@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+html {
+  @apply text-gray-900 font-roboto antialiased;
+}
+
 b, strong {
   @apply font-700;
 }
