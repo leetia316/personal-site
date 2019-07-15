@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <main class="flex flex-col min-h-100vh">
     <!-- Hero Section -->
-    <div class="flex flex-wrap-reverse items-center max-w-1080 mx-auto py-48 768:py-96 px-24">
+    <div class="flex flex-wrap-reverse items-center max-w-1080 mx-auto py-48 768:py-96 px-24 flex-grow">
       <div class="w-100% 768:w-66% 768:pr-24">
         <h1
           class="text-36 768:text-48 leading-none pb-8 pt-24 768:pt-0"
@@ -57,17 +57,17 @@
 <script>
   import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
-  import pageContent from '~/content/singletons/index'
+  import PageContent from '~/content/singletons/index'
 
   export default {
     name: 'Index',
     components: { TheButton },
     setup() {
-      const content = value(pageContent)
+      const content = value(PageContent)
       return { content }
     },
     head: () => ({
-      title: pageContent.title,
+      title: PageContent.title,
     }),
   }
 </script>
