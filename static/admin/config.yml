@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - label: "Singletons"
+    name: "singletons"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "content/singletons/index.yml"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: Headline, name: headline, widget: string }
+              - { label: Subheadline, name: subheadline, widget: string }
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - label: "Hero"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: Headline, name: headline, widget: string }
+                  - { label: Icon, name: icon, widget: string }
+                  - { label: Paragraph, name: paragraph, widget: text }

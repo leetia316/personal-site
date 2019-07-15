@@ -10,10 +10,6 @@
           class="pb-32"
           v-html="fm.hero.subheadline" />
         <TheButton
-          link="/contact"
-          text="Contact Me" />
-        <TheButton
-          secondary
           newtab
           link="/MattWaler.pdf"
           classes="ml-12"
@@ -28,7 +24,7 @@
       <div class="w-100% 768:w-33% pl-24">
         <img
           class="w-50% mx-auto 768:w-100% rounded-lg shadow-lg"
-          src="~/assets/HannahAndEmily.jpg"
+          src="~/assets/sisters.jpg"
           alt="My sisters, Hannah and Emily.">
       </div>
     </div>
@@ -60,7 +56,7 @@
 </template>
 
 <script>
-  import { value } from 'vue-function-api'
+  import { value, onMounted } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
   import Content from '~/content/singletons/index.md'
 
@@ -69,10 +65,24 @@
     components: { TheButton },
     setup() {
       const fm = value(Content.attributes)
+      onMounted(() => {
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on('init', (user) => {
+            if (!user) {
+              window.netlifyIdentity.on('login', () => {
+                document.location.href = '/admin/'
+              })
+            }
+          })
+        }
+      })
       return { fm }
     },
     head: () => ({
       title: Content.attributes.title,
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
     }),
   }
 </script>
