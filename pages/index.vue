@@ -12,7 +12,6 @@
         <TheButton
           newtab
           link="/MattWaler.pdf"
-          classes="ml-12"
           text="View my Resume" />
         <div class="flex items-center pt-64">
           <Checked class="w-32 text-sea-green fill-current" />
@@ -58,17 +57,17 @@
 <script>
   import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
-  import yaml from '~/content/singletons/index.yaml'
+  import pageContent from '~/content/singletons/index'
 
   export default {
     name: 'Index',
     components: { TheButton },
     setup() {
-      const content = value(yaml)
+      const content = value(pageContent)
       return { content }
     },
     head: () => ({
-      title: yaml.title,
+      title: pageContent.title,
     }),
   }
 </script>

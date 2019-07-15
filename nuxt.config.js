@@ -9,18 +9,6 @@ const tailwind = resolveConfig(tailwindConfig)
 export default {
   build: {
     extractCSS: true,
-    extend (config) {
-      config.module.rules.push(
-        {
-          test: /\.md$/,
-          loader: 'frontmatter-markdown-loader',
-        },
-        {
-          test: /\.yaml$/,
-          loader: 'js-yaml-loader',
-        },
-      )
-    },
     postcss,
   },
   css: ['~/assets/tailwind.css'],
@@ -37,6 +25,7 @@ export default {
   },
   mode: 'universal',
   modules: [
+    '@nuxtjs/markdownit',
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
   ],
