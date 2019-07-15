@@ -11,7 +11,7 @@ collections:
     files:
       - label: "Homepage"
         name: "homepage"
-        file: "content/singletons/index.yml"
+        file: "content/singletons/homepage.yml"
         fields:
           - label: "Hero"
             name: "hero"
@@ -23,10 +23,6 @@ collections:
             name: "skills"
             widget: "list"
             fields:
-              - label: "Hero"
-                name: "hero"
-                widget: "object"
-                fields:
-                  - { label: Headline, name: headline, widget: string }
-                  - { label: Icon, name: icon, widget: string }
-                  - { label: Paragraph, name: paragraph, widget: text }
+              - { label: Headline, name: headline, widget: string }
+              - { label: Icon, name: icon, widget: string }
+              - { label: Paragraph, name: paragraph, widget: text }
