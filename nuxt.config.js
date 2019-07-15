@@ -1,18 +1,25 @@
 import resolveConfig from 'tailwindcss/resolveConfig'
 
 import head from './head'
-import tailwind from './tailwind'
+import tailwindConfig from './tailwind'
+import postcss from './postcss'
 
-const config = resolveConfig(tailwind)
+const tailwind = resolveConfig(tailwindConfig)
 
 export default {
   build: {
     extractCSS: true,
+    extend (config) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+      })
+    },
+    postcss,
   },
   css: ['~/assets/tailwind.css'],
   env: {
-    API: process.env.API,
-    tailwind: config,
+    tailwind,
   },
   generate: {
     dir: '.build',
@@ -24,11 +31,11 @@ export default {
   },
   mode: 'universal',
   modules: [
-    '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
   ],
   plugins: [
+    '~/plugins/functionApi',
     '~/plugins/globalComponents',
   ],
 }

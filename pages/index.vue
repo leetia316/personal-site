@@ -1,70 +1,88 @@
 <template>
-  <div class="flex flex-col min-h-100vh 768:h-100vh justify-center 640:items-center 640:text-center px-24">
-    <Logo
-      aria-hidden="true"
-      class="w-96 h-96 fill-current mb-24" />
-    <h1 class="text-36 font-headline font-700 mb-24">
-      {{ headline }}
-    </h1>
-    <h2 class="max-w-640 leading-normal mb-24 text-16 font-400">
-      {{ content }}
-    </h2>
-    <h3 class="pb-8 font-600">
-      I am currently available for business opportunities!
-    </h3>
-    <a
-      class="mb-24 underline"
-      href="mailto:contact@mattwaler.com">
-      Shoot me an email!
-    </a>
-    <div
-      class="flex items-center"
-      role="presentation">
-      <a
-        title="LinkedIn"
-        target="_blank"
-        href="https://www.linkedin.com/in/matthewwaler/">
-        <LinkedIn class="w-32 mr-16 640:m-16 trans" />
-      </a>
-      <a
-        title="GitHub"
-        target="_blank"
-        href="https://github.com/mattwaler">
-        <GitHub class="w-32 mr-16 640:m-16 trans" />
-      </a>
-      <a
-        title="Dev.to"
-        target="_blank"
-        href="https://dev.to/mattwaler">
-        <Dev class="w-32 mr-16 640:m-16 trans" />
-      </a>
+  <main>
+    <!-- Hero Section -->
+    <div class="flex flex-wrap-reverse items-center max-w-1080 mx-auto py-48 768:py-96 px-24">
+      <div class="w-100% 768:w-66% 768:pr-24">
+        <h1
+          class="text-36 768:text-48 leading-none pb-8 pt-24 768:pt-0"
+          v-html="fm.hero.headline" />
+        <p
+          class="pb-32"
+          v-html="fm.hero.subheadline" />
+        <TheButton
+          newtab
+          link="/MattWaler.pdf"
+          classes="ml-12"
+          text="View my Resume" />
+        <div class="flex items-center pt-64">
+          <Checked class="w-32 text-sea-green fill-current" />
+          <p class="uppercase text-20 text-gray-600 pl-12">
+            Currently available for freelance & consulting
+          </p>
+        </div>
+      </div>
+      <div class="w-100% 768:w-33% pl-24">
+        <img
+          class="w-50% mx-auto 768:w-100% rounded-lg shadow-lg"
+          src="~/assets/sisters.jpg"
+          alt="My sisters, Hannah and Emily.">
+      </div>
     </div>
-  </div>
+
+    <!-- Waves/Features Section -->
+    <div class="w-100% relative">
+      <Waves class="w-100%" />
+      <div class="w-100% absolute bottom-0 bg-deep-blue h-2" />
+    </div>
+    <div class="bg-deep-blue w-100% text-white">
+      <div class="max-w-1280 mx-auto py-36 px-24 flex flex-wrap">
+        <article
+          v-for="(item, index) in fm.skills"
+          :key="index"
+          class="w-100% 960:w-33% p-24 flex">
+          <component
+            :is="item.icon"
+            class="text-sea-green fill-current w-32 h-32 flex-none" />
+          <div class="flex-1 pl-16">
+            <h2 class="uppercase font-700 text-24 leading-none pb-16 pt-4">
+              {{ item.headline }}
+            </h2>
+            <div v-html="item.paragraph" />
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
 </template>
 
 <script>
-  import axios from 'axios'
+  import { value, onMounted } from 'vue-function-api'
+  import TheButton from '~/components/TheButton.vue'
+  import Content from '~/content/singletons/index.md'
 
   export default {
     name: 'Index',
-    asyncData: async () => {
-      const res = await axios({
-        method: 'post',
-        url: process.env.API,
-        data: {
-          query: `{
-            homepage {
-              content
-              headline
+    components: { TheButton },
+    setup() {
+      const fm = value(Content.attributes)
+      onMounted(() => {
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on('init', (user) => {
+            if (!user) {
+              window.netlifyIdentity.on('login', () => {
+                document.location.href = '/admin/'
+              })
             }
-          }`,
-        },
+          })
+        }
       })
-      const { headline, content } = res.data.data.homepage[0]
-      return { headline, content }
+      return { fm }
     },
     head: () => ({
-      title: 'Matt Waler | Frontend Developer',
+      title: Content.attributes.title,
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
     }),
   }
 </script>
