@@ -3,12 +3,12 @@
     <!-- Hero Section -->
     <div class="flex flex-wrap-reverse items-center max-w-1080 mx-auto py-48 768:py-96 px-24">
       <div class="w-100% 768:w-66% 768:pr-24">
-        <h1 class="text-36 768:text-48 leading-none pb-8 pt-24 768:pt-0">
-          I'm a <b>pragmatic web developer</b> that wears many hats.
-        </h1>
-        <p class="pb-32">
-          ...metaphorically. I look <span class="uppercase font-700 italic">really</span> bad in hats.
-        </p>
+        <h1
+          class="text-36 768:text-48 leading-none pb-8 pt-24 768:pt-0"
+          v-html="fm.hero.headline" />
+        <p
+          class="pb-32"
+          v-html="fm.hero.subheadline" />
         <TheButton
           link="/contact"
           text="Contact Me" />
@@ -41,7 +41,7 @@
     <div class="bg-deep-blue w-100% text-white">
       <div class="max-w-1280 mx-auto py-36 px-24 flex flex-wrap">
         <article
-          v-for="(item, index) in markdown.attributes.skills"
+          v-for="(item, index) in fm.skills"
           :key="index"
           class="w-100% 960:w-33% p-24 flex">
           <component
@@ -60,19 +60,19 @@
 </template>
 
 <script>
-  import TheButton from '~/components/TheButton.vue'
-  import content from '~/content/singletons/index.md'
   import { value } from 'vue-function-api'
+  import TheButton from '~/components/TheButton.vue'
+  import Content from '~/content/singletons/index.md'
 
   export default {
     name: 'Index',
     components: { TheButton },
     setup() {
-      const markdown = value(content)
-      return { markdown }
+      const fm = value(Content.attributes)
+      return { fm }
     },
     head: () => ({
-      title: content.attributes.title,
+      title: Content.attributes.title,
     }),
   }
 </script>

@@ -1,5 +1,10 @@
 ---
 title: Matt Waler | Frontend Developer
+
+hero:
+  headline: I'm a <b>pragmatic web developer</b> that wears many hats.
+  subheadline: ...metaphorically. I look really bad in hats.
+
 skills:
   - headline: Frontend Development
     icon: Frontend
