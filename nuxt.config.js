@@ -11,6 +11,12 @@ const tailwind = resolveConfig(tailwindConfig)
 export default {
   build: {
     extractCSS: true,
+    extend (config) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+      })
+    },
     postcss,
   },
   css: ['~/assets/tailwind.css'],

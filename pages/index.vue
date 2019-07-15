@@ -41,7 +41,7 @@
     <div class="bg-deep-blue w-100% text-white">
       <div class="max-w-1280 mx-auto py-36 px-24 flex flex-wrap">
         <article
-          v-for="(item, index) in homepage.skills"
+          v-for="(item, index) in markdown.attributes.skills"
           :key="index"
           class="w-100% 960:w-33% p-24 flex">
           <component
@@ -60,40 +60,19 @@
 </template>
 
 <script>
-  import axios from 'axios'
   import TheButton from '~/components/TheButton.vue'
-
-  const query = `
-    {
-      homepage {
-        skills {
-          headline
-          paragraph(markdown: true)
-          icon
-        }
-      }
-    }
-  `
+  import content from '~/content/singletons/index.md'
+  import { value } from 'vue-function-api'
 
   export default {
     name: 'Index',
     components: { TheButton },
-    setup() {},
-    asyncData: async () => {
-      const api = await axios(process.env.API, {
-        method: 'post',
-        headers: {
-          Accept: 'application/json',
-          Authorization: `Bearer ${process.env.TOKEN}`,
-          'Content-Type': 'application/json',
-        },
-        data: { query },
-      })
-      const content = api.data.data
-      return content
+    setup() {
+      const markdown = value(content)
+      return { markdown }
     },
     head: () => ({
-      title: 'Matt Waler | Frontend Developer',
+      title: content.attributes.title,
     }),
   }
 </script>
