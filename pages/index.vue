@@ -56,7 +56,7 @@
 </template>
 
 <script>
-  import { value, onMounted } from 'vue-function-api'
+  import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
   import Content from '~/content/singletons/index.md'
 
@@ -65,24 +65,10 @@
     components: { TheButton },
     setup() {
       const fm = value(Content.attributes)
-      onMounted(() => {
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on('init', (user) => {
-            if (!user) {
-              window.netlifyIdentity.on('login', () => {
-                document.location.href = '/admin/'
-              })
-            }
-          })
-        }
-      })
       return { fm }
     },
     head: () => ({
       title: Content.attributes.title,
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
-      ],
     }),
   }
 </script>
