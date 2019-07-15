@@ -34,6 +34,7 @@
     "eslint-plugin-vue": "^5.2.2",
     "frontmatter-markdown-loader": "^1.8.0",
     "jest": "^24.8.0",
+    "js-yaml-loader": "^1.2.2",
     "nodemon": "^1.18.9",
     "postcss-clean": "^1.1.0",
     "postcss-easy-import": "^3.0.0",

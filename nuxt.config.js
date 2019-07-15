@@ -10,10 +10,16 @@ export default {
   build: {
     extractCSS: true,
     extend (config) {
-      config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-      })
+      config.module.rules.push(
+        {
+          test: /\.md$/,
+          loader: 'frontmatter-markdown-loader',
+        },
+        {
+          test: /\.yaml$/,
+          loader: 'js-yaml-loader',
+        },
+      )
     },
     postcss,
   },

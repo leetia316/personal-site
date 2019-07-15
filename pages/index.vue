@@ -5,10 +5,10 @@
       <div class="w-100% 768:w-66% 768:pr-24">
         <h1
           class="text-36 768:text-48 leading-none pb-8 pt-24 768:pt-0"
-          v-html="fm.hero.headline" />
+          v-html="content.hero.headline" />
         <p
           class="pb-32"
-          v-html="fm.hero.subheadline" />
+          v-html="content.hero.subheadline" />
         <TheButton
           newtab
           link="/MattWaler.pdf"
@@ -37,7 +37,7 @@
     <div class="bg-deep-blue w-100% text-white">
       <div class="max-w-1280 mx-auto py-36 px-24 flex flex-wrap">
         <article
-          v-for="(item, index) in fm.skills"
+          v-for="(item, index) in content.skills"
           :key="index"
           class="w-100% 960:w-33% p-24 flex">
           <component
@@ -58,17 +58,17 @@
 <script>
   import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
-  import Content from '~/content/singletons/index.md'
+  import yaml from '~/content/singletons/index.yaml'
 
   export default {
     name: 'Index',
     components: { TheButton },
     setup() {
-      const fm = value(Content.attributes)
-      return { fm }
+      const content = value(yaml)
+      return { content }
     },
     head: () => ({
-      title: Content.attributes.title,
+      title: yaml.title,
     }),
   }
 </script>
