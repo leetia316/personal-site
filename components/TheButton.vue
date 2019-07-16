@@ -22,7 +22,10 @@
     },
     setup(props) {
       const isNewTab = computed(() => (props.newtab ? '_blank' : '_self'))
-      const setColors = computed(() => (props.secondary ? 'bg-gray-200 hover:bg-gray-400' : 'bg-deep-blue text-white hover:bg-sea-green'))
+      const setColors = computed(() => (props.secondary
+        ? 'bg-gray-200 hover:bg-gray-400'
+        : 'bg-deep-blue text-white hover:bg-sea-green'
+      ))
       return {
         isNewTab,
         setColors,

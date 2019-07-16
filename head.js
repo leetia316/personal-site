@@ -45,6 +45,7 @@ export default {
   ],
   script: [
     { crossorigin: 'anonymous', src: 'https://polyfill.io/v3/polyfill.js?flags=gated' },
+    { src: '/scripts/cssua.js' },
   ],
   title: 'Hello!',
 }
