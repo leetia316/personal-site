@@ -43,5 +43,8 @@ export default {
     { name: 'msapplication-config', content: '/browserconfig.xml' },
     { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
   ],
+  script: [
+    { crossorigin: 'anonymous', src: 'https://polyfill.io/v3/polyfill.js?flags=gated' },
+  ],
   title: 'Hello!',
 }
