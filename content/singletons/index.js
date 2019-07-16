@@ -1,8 +1,8 @@
 const content = {
   title: 'Matt Waler | Frontend Developer',
   hero: {
-    headline: 'I\'m a <b>pragmatic web developer</b> that wears many hats.',
-    subheadline: '...metaphorically. I look really bad in hats',
+    headline: 'I\'m a <b>pragmatic web developer</b> who wears many hats.',
+    subheadline: 'Metaphorically speaking. I look <b><i>REALLY</i></b> bad in hats.',
   },
   skills: [
     {

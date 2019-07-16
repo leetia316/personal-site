@@ -1,8 +1,8 @@
 <template>
-  <main class="flex flex-col min-h-100vh">
+  <main class="flex flex-col">
     <!-- Hero Section -->
-    <div class="flex flex-wrap-reverse items-center max-w-1080 mx-auto py-48 768:py-96 px-24 flex-grow">
-      <div class="w-100% 768:w-66% 768:pr-24">
+    <div class="flex flex-wrap-reverse items-center flex-grow max-w-1080 mx-auto py-48 px-24 768:py-96">
+      <div class="w-100% 768:w-66% 768:pr-32">
         <h1
           class="text-36 768:text-48 leading-none pb-8 pt-24 768:pt-0"
           v-html="content.hero.headline" />
@@ -20,9 +20,9 @@
           </p>
         </div>
       </div>
-      <div class="w-100% 768:w-33% pl-24">
+      <div class="w-100% 768:w-33% pl-32">
         <img
-          class="w-50% mx-auto 768:w-100% rounded-lg shadow-lg"
+          class="w-66% mx-auto rounded-lg shadow-lg 768:w-100%"
           src="~/assets/sisters.jpg"
           alt="My sisters, Hannah and Emily.">
       </div>

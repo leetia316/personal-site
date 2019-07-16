@@ -11,9 +11,6 @@ const fontSizes = [14, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96]
 const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 const percentSizes = [20, 25, 40, 50, 60, 75, 80, 100]
 const percentSizesCalc = {
-  '12%': 'calc(100% * (1/8))',
-  '16%': 'calc(100% * (1/6))',
-  '17%': 'calc(100% * (1/7))',
   '33%': 'calc(100% * (1/3))',
   '66%': 'calc(100% * (2/3))',
 }
@@ -69,6 +66,8 @@ viewportSizes.forEach((size) => {
 })
 
 const sizing = {
+  0: '0',
+  auto: 'auto',
   ...percentSize,
   ...remSize,
   ...viewportSize,

@@ -3,7 +3,7 @@
     <div
       role="presentation"
       class="w-100% h-16 bg-deep-blue" />
-    <header class="flex justify-between items-center max-w-1080 mx-auto pt-48 px-24">
+    <header class="flex flex-wrap justify-center items-center max-w-1080 mx-auto pt-48 px-24 768:justify-between">
       <!-- Logo -->
       <a
         href="/"
@@ -15,11 +15,11 @@
         </div>
       </a>
       <!-- Nav Items -->
-      <nav class="text-gray-600">
+      <nav class="text-gray-600 w-100% flex justify-around pt-32 768:pt-0 768:w-auto">
         <a
           v-for="item in links"
           :key="item.text"
-          class="ml-32 hover:text-black font-700 uppercase tracking-wide trans"
+          class="font-700 uppercase tracking-wide trans hover:text-black 768:ml-32"
           target="_blank"
           :href="item.link">{{ item.text }}</a>
       </nav>
