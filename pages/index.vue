@@ -20,7 +20,7 @@
           </p>
         </div>
       </div>
-      <div class="w-100% 768:w-33% pl-32">
+      <div class="w-100% 768:w-33% 768:pl-32">
         <img
           class="w-66% mx-auto rounded-lg shadow-lg 768:w-100%"
           src="~/assets/sisters.jpg"
