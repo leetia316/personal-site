@@ -11,9 +11,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/markdownit": "^1.2.6",
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
     "nuxt": "^2.4.0",
     "nuxt-svg-loader": "^1.0.1",
     "vue-function-api": "^2.0.6"
@@ -25,7 +27,6 @@
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
-    "dotenv": "^8.0.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",

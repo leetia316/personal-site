@@ -55,19 +55,17 @@
 </template>
 
 <script>
-  import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
-  import PageContent from '~/content/singletons/index.json'
 
   export default {
     name: 'Index',
     components: { TheButton },
-    setup() {
-      const content = value(PageContent)
-      return { content }
+    async asyncData({ $axios }) {
+      const data = await $axios.$get('/pages/10')
+      return { content: data.acf }
     },
     head: () => ({
-      title: PageContent.title,
+      title: 'Matt Waler | Frontend Developer',
     }),
   }
 </script>
