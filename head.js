@@ -44,7 +44,7 @@ export default {
     { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
   ],
   script: [
-    { crossorigin: 'anonymous', src: 'https://polyfill.io/v3/polyfill.js?flags=gated' },
+    { crossorigin: 'anonymous', src: 'https://polyfill.io/v3/polyfill.js' },
     { src: '/scripts/cssua.js' },
   ],
   title: 'Hello!',
