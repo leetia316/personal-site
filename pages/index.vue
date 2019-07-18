@@ -57,7 +57,7 @@
 <script>
   import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
-  import PageContent from '~/content/singletons/index'
+  import PageContent from '~/content/singletons/index.json'
 
   export default {
     name: 'Index',
