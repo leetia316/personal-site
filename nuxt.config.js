@@ -7,12 +7,8 @@ import postcss from './postcss'
 
 const tailwind = resolveConfig(tailwindConfig)
 dotenv.config()
-const { API } = process.env
 
 export default {
-  axios: {
-    baseURL: API,
-  },
   build: {
     extractCSS: true,
     postcss,
@@ -31,8 +27,6 @@ export default {
   },
   mode: 'universal',
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/markdownit',
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
   ],

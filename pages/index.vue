@@ -55,14 +55,34 @@
 </template>
 
 <script>
+  import axios from 'axios'
   import TheButton from '~/components/TheButton.vue'
+
+  const { API } = process.env
+  const query = `
+    query {
+      homepageBy(id: "aG9tZXBhZ2U6NDU=") {
+        homepageACFs {
+          hero {
+            headline,
+            subheadline
+          },
+          skills {
+            headline,
+            icon,
+            paragraph
+          }
+        }
+      }
+    }`
 
   export default {
     name: 'Index',
     components: { TheButton },
-    async asyncData({ $axios }) {
-      const data = await $axios.$get('/pages/10')
-      return { content: data.acf }
+    async asyncData() {
+      const { data } = await axios.post(API, { query })
+      const content = data.data.homepageBy.homepageACFs
+      return { content }
     },
     head: () => ({
       title: 'Matt Waler | Frontend Developer',
