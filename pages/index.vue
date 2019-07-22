@@ -84,8 +84,8 @@
 </template>
 
 <script>
-  import { value } from 'vue-function-api'
   import TheButton from '~/components/TheButton.vue'
+  import { hero, skills, hobbies } from '~/content/index'
 
   export default {
     name: 'Index',
@@ -110,9 +110,7 @@
         { icon: 'Gaming', text: 'I have been a competitive gamer since birth. I am currently hooked on <b>Apex Legends</b>.' },
       ])
       return {
-        hero,
-        skills,
-        hobbies,
+        hero, skills, hobbies,
       }
     },
   }
