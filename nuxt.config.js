@@ -31,6 +31,7 @@ export default {
     'nuxt-svg-loader',
   ],
   plugins: [
+    '~/plugins/coreJS',
     '~/plugins/functionApi',
     '~/plugins/globalComponents',
   ],
