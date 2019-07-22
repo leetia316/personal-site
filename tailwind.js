@@ -84,12 +84,20 @@ const margin = {
   ...remSpacingNegative,
 }
 
+const ie = ({ addVariant, e }) => {
+  addVariant('ie', ({ modifySelectors, separator }) => {
+    modifySelectors(({ className }) => `html.ua-ie .ie${e(`${separator}${className}`)}`)
+  })
+}
+
 const config = {
   corePlugins: {
     container: false,
   },
   important: false,
-  plugins: [],
+  plugins: [
+    ie,
+  ],
   prefix: '',
   separator: ':',
   theme: {
@@ -108,6 +116,9 @@ const config = {
     padding: spacing,
     screens,
     width: sizing,
+  },
+  variants: {
+    display: ['responsive', 'ie'],
   },
 }
 
