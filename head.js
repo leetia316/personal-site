@@ -28,7 +28,7 @@ export default {
   link: [
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Roboto:400, 400i, 700,700i&display=swap',
+      href: 'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap',
     },
     { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
     ...favicons,

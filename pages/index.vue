@@ -9,15 +9,17 @@
         <p
           class="pb-32"
           v-html="hero.subheadline" />
-        <TheButton
-          link="/contact"
-          text="Contact" />
-        <TheButton
-          secondary
-          newtab
-          classes="ml-16"
-          link="/MattWaler.pdf"
-          text="View Resume" />
+        <div class="flex flex-col items-start 480:flex-row">
+          <TheButton
+            classes="mb-16 480:mb-0 480:mr-16"
+            link="/contact"
+            text="Contact" />
+          <TheButton
+            secondary
+            newtab
+            link="/MattWaler.pdf"
+            text="View Resume" />
+        </div>
         <div class="flex items-center pt-64">
           <Checked class="w-32 h-32 flex-shrink-0 text-sea-green fill-current" />
           <p class="uppercase leading-snug text-20 text-gray-600 pl-12">
