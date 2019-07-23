@@ -2,6 +2,7 @@
 const colors = {
   'deep-blue': '#0068A7',
   'sea-green': '#1ACCAC',
+  'dark-grey': '#D5D9DB',
 }
 // Font Stuff
 const fontFamily = {

@@ -16,6 +16,11 @@
       </a>
       <!-- Nav Items -->
       <nav class="text-gray-600 w-100% flex justify-around pt-32 768:pt-0 768:w-auto">
+        <nuxt-link
+          to="/contact"
+          class="font-700 uppercase tracking-wide trans hover:text-black 768:ml-32">
+          Contact
+        </nuxt-link>
         <a
           v-for="item in links"
           :key="item.text"

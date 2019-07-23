@@ -1,8 +1,15 @@
 <template>
+  <button
+    v-if="isButton"
+    type="submit"
+    :class="[defaultClasses, setColors, classes]">
+    {{ text }}
+  </button>
   <nuxt-link
+    v-else
     class="inline-block uppercase font-700 py-16 px-32 rounded tracking-wide trans"
     :target="isNewTab"
-    :class="[setColors, classes]"
+    :class="[defaultClasses, setColors, classes]"
     :to="link">
     {{ text }}
   </nuxt-link>
@@ -11,10 +18,13 @@
 <script>
   import { computed } from 'vue-function-api'
 
+  const defaultClasses = 'inline-block uppercase font-700 py-16 px-32 rounded tracking-wide trans'
+
   export default {
     name: 'TheButton',
     props: {
       classes: { type: String, default: '' },
+      isButton: { type: Boolean, default: false },
       link: { type: String, default: '' },
       newtab: { type: Boolean, default: false },
       secondary: { type: Boolean, default: false },
@@ -27,6 +37,7 @@
         : 'bg-deep-blue text-white hover:bg-sea-green'
       ))
       return {
+        defaultClasses,
         isNewTab,
         setColors,
       }

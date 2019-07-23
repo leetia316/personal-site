@@ -10,9 +10,14 @@
           class="pb-32"
           v-html="hero.subheadline" />
         <TheButton
+          link="/contact"
+          text="Contact" />
+        <TheButton
+          secondary
           newtab
+          classes="ml-16"
           link="/MattWaler.pdf"
-          text="View my Resume" />
+          text="View Resume" />
         <div class="flex items-center pt-64">
           <Checked class="w-32 h-32 flex-shrink-0 text-sea-green fill-current" />
           <p class="uppercase leading-snug text-20 text-gray-600 pl-12">
@@ -80,12 +85,33 @@
         </div>
       </div>
     </div>
+
+    <!-- Pedestal Section -->
+    <div class="w-100% px-24 py-48 bg-dark-grey">
+      <div class="max-w-1280 mx-auto flex flex-wrap items-center">
+        <Technology class="w-33% flex-shrink-0 mx-auto" />
+        <div class="flex-shrink w-100% pt-32 960:pt-0 960:w-66% 960:pl-96">
+          <p
+            class="text-20"
+            v-html="pedestal.paragraph" />
+          <p class="text-24 font-400 italic leading-none py-24">
+            {{ pedestal.quotes[0].quote }}
+          </p>
+          <p class="font-700">
+            {{ pedestal.quotes[0].person }}
+          </p>
+          <p>{{ pedestal.quotes[0].title }}</p>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
 <script>
   import TheButton from '~/components/TheButton.vue'
-  import { hero, skills, hobbies } from '~/content/index'
+  import {
+    hero, skills, hobbies, pedestal,
+  } from '~/content/index'
 
   export default {
     name: 'Index',
@@ -95,7 +121,7 @@
     }),
     setup() {
       return {
-        hero, skills, hobbies,
+        hero, skills, hobbies, pedestal,
       }
     },
   }
