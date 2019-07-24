@@ -31,7 +31,7 @@
         <img
           class="w-66% mx-auto rounded-lg shadow-lg 768:w-100%"
           :src="hero.image"
-          alt="My sisters, Hannah and Emily.">
+          alt="My two ridiculous sisters, Hannah and Emily.">
       </div>
     </div>
 

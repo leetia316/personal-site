@@ -3,7 +3,7 @@
     <img
       class="rounded-full shadow max-w-256"
       src="/images/me.jpg"
-      alt="">
+      alt="Headshot of Matt Waler.">
     <h1 class="text-36 font-700 pt-16">
       Let's get in touch.
     </h1>
