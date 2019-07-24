@@ -7,12 +7,23 @@
 
 <script>
   import { onMounted } from 'vue-function-api'
+  import { mapMutations, mapState } from 'vuex'
+
   import TheHeader from '~/components/TheHeader.vue'
 
   export default {
     name: 'DefaultLayout',
     components: {
       TheHeader,
+    },
+    // Old method of vuex because new stuff not supported rn
+    computed: mapState({
+      isOpen: state => state.mobileMenu.isOpen,
+    }),
+    methods: {
+      ...mapMutations({
+        toggleMenu: 'mobileMenu/toggle',
+      }),
     },
     setup() {
       onMounted(() => {

@@ -91,7 +91,7 @@
     <!-- Pedestal Section -->
     <div class="w-100% px-24 py-48 bg-dark-grey">
       <div class="max-w-1280 mx-auto flex flex-wrap items-center">
-        <Technology class="w-33% flex-shrink-0 mx-auto" />
+        <Technology class="w-75% 960:w-33% flex-shrink-0 mx-auto" />
         <div class="flex-shrink w-100% pt-32 960:pt-0 960:w-66% 960:pl-96">
           <p
             class="text-20"
