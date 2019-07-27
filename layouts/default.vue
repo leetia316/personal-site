@@ -2,6 +2,7 @@
   <div class="flex flex-col min-h-100vh">
     <TheHeader />
     <nuxt class="flex-grow" />
+    <TheFooter />
   </div>
 </template>
 
@@ -10,11 +11,12 @@
   import { mapMutations, mapState } from 'vuex'
 
   import TheHeader from '~/components/TheHeader.vue'
+  import TheFooter from '~/components/TheFooter.vue'
 
   export default {
     name: 'DefaultLayout',
     components: {
-      TheHeader,
+      TheHeader, TheFooter,
     },
     // Old method of vuex because new stuff not supported rn
     computed: mapState({

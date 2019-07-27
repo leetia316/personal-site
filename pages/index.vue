@@ -37,7 +37,7 @@
 
     <!-- Waves -->
     <div
-      class="w-100% h-0 relative"
+      class="w-100% h-0 relative text-deep-blue"
       style="padding-bottom: calc(100% * 83/1366);">
       <Waves class="absolute w-100% h-100% top-0 left-0" />
       <div class="w-100% absolute bottom-0 bg-deep-blue h-2" />
@@ -105,6 +105,17 @@
           <p>{{ pedestal.quotes[0].title }}</p>
         </div>
       </div>
+    </div>
+
+    <!-- C2A Section -->
+    <div class="max-w-1280 mx-auto px-24 py-96 flex flex-wrap items-center justify-center">
+      <TheButton
+        classes="mb-32 960:mr-32 960:mb-0"
+        text="Contact Me"
+        link="/contact" />
+      <p class="text-36 text-center font-700 leading-none w-100% 960:w-auto">
+        Enough talking about me. How can I help?
+      </p>
     </div>
   </main>
 </template>

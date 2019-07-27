@@ -1,8 +1,6 @@
 <template>
-  <div role="presentation">
-    <div
-      role="presentation"
-      class="w-100% h-16 bg-deep-blue" />
+  <div>
+    <div class="w-100% h-16 bg-deep-blue" />
     <header class="flex flex-wrap justify-center items-center max-w-1080 mx-auto pt-48 px-24 768:justify-between">
       <a
         href="/"

@@ -1,7 +1,7 @@
 export const hero = {
-  headline: 'I\'m a <b>pragmatic web developer</b> who wears many hats.',
+  headline: 'I am a <b>pragmatic web developer</b> who wears many hats.',
   image: '/images/sisters.jpg',
-  subheadline: '... metaphorically speaking. I look <b><i>REALLY</b></i> bad in hats.',
+  subheadline: 'Metaphorically. I look <b><i>REALLY</b></i> bad in hats.',
 }
 
 export const skills = [
