@@ -15,6 +15,7 @@
             link="/contact"
             text="Contact" />
           <TheButton
+            element="a"
             secondary
             newtab
             link="/MattWaler.pdf"

@@ -1,21 +1,17 @@
 <template>
-  <button
-    v-if="isButton"
-    type="submit"
-    :class="allColors">
+  <component
+    :is="element"
+    :class="[defaultClasses, setColors, classes]"
+    :target="newtab ? '_blank' : false"
+    :to="element == 'nuxt-link' ? link : false"
+    :href="element == 'a' ? link : false"
+    :type="element == 'button' ? 'submit' : false">
     {{ text }}
-  </button>
-  <nuxt-link
-    v-else
-    :target="isNewTab"
-    :class="allColors"
-    :to="link">
-    {{ text }}
-  </nuxt-link>
+  </component>
 </template>
 
 <script>
-  import { computed, value } from 'vue-function-api'
+  import { computed } from 'vue-function-api'
 
   const defaultClasses = 'uppercase font-700 py-16 px-32 rounded tracking-wide trans whitespace-no-wrap'
 
@@ -23,7 +19,7 @@
     name: 'TheButton',
     props: {
       classes: { type: String, default: '' },
-      isButton: { type: Boolean, default: false },
+      element: { type: String, default: 'nuxt-link' },
       link: { type: String, default: '' },
       newtab: { type: Boolean, default: false },
       secondary: { type: Boolean, default: false },
@@ -35,9 +31,7 @@
         ? 'bg-gray-200 hover:bg-gray-400'
         : 'bg-deep-blue text-white hover:bg-sea-green'
       ))
-      const allColors = value([defaultClasses, setColors, props.classes])
       return {
-        allColors,
         defaultClasses,
         setColors,
         isNewTab,

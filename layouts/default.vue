@@ -18,7 +18,6 @@
     components: {
       TheHeader, TheFooter,
     },
-    // Old method of vuex because new stuff not supported rn
     computed: mapState({
       isOpen: state => state.mobileMenu.isOpen,
     }),

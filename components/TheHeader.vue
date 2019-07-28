@@ -12,22 +12,16 @@
         </div>
       </a>
       <nav class="text-gray-600 w-100% flex justify-around pt-32 768:pt-0 768:w-auto">
-        <div
+        <component
+          :is="item.element"
           v-for="(item, index) in links"
           :key="index"
+          :to="item.element == 'nuxt-link' ? item.link : false"
+          :href="item.element == 'a' ? item.link : false"
+          :target="item.element == 'a' ? '_blank' : false"
           class="font-700 uppercase tracking-wide trans hover:text-black 768:ml-32">
-          <a
-            v-if="item.newTab"
-            target="_blank"
-            :href="item.link">
-            {{ item.text }}
-          </a>
-          <nuxt-link
-            v-else
-            :to="item.link">
-            {{ item.text }}
-          </nuxt-link>
-        </div>
+          {{ item.text }}
+        </component>
       </nav>
     </header>
   </div>
@@ -40,10 +34,10 @@
     name: 'Header',
     setup() {
       const links = value([
-        { text: 'Contact', link: '/contact', newTab: false },
-        { text: 'Github', link: 'https://github.com/mattwaler', newTab: true },
-        { text: 'LinkedIn', link: 'https://www.linkedin.com/in/matthewwaler/', newTab: true },
-        { text: 'Resume', link: '/MattWaler.pdf', newTab: true },
+        { text: 'Contact', link: '/contact', element: 'nuxt-link' },
+        { text: 'Github', link: 'https://github.com/mattwaler', element: 'a' },
+        { text: 'LinkedIn', link: 'https://www.linkedin.com/in/matthewwaler/', element: 'a' },
+        { text: 'Resume', link: '/MattWaler.pdf', element: 'a' },
       ])
       return {
         links,
