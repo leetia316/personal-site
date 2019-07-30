@@ -2,7 +2,7 @@
   <component
     :is="element"
     :class="[defaultClasses, setColors, classes]"
-    :target="newtab ? '_blank' : false"
+    :target="newTab ? '_blank' : false"
     :to="element == 'nuxt-link' ? link : false"
     :href="element == 'a' ? link : false"
     :type="element == 'button' ? 'submit' : false">
@@ -21,12 +21,12 @@
       classes: { type: String, default: '' },
       element: { type: String, default: 'nuxt-link' },
       link: { type: String, default: '' },
-      newtab: { type: Boolean, default: false },
+      newTab: { type: Boolean, default: false },
       secondary: { type: Boolean, default: false },
       text: { type: String, default: '' },
     },
     setup(props) {
-      const isNewTab = computed(() => (props.newtab ? '_blank' : '_self'))
+      const isNewTab = computed(() => (props.newTab ? '_blank' : '_self'))
       const setColors = computed(() => (props.secondary
         ? 'bg-gray-200 hover:bg-gray-400'
         : 'bg-deep-blue text-white hover:bg-sea-green'
