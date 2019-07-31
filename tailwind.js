@@ -1,4 +1,4 @@
-// #region Values
+// ANCHOR Values
 
 const colors = {
   'deep-blue': '#0068A7',
@@ -6,13 +6,13 @@ const colors = {
   'dark-grey': '#D5D9DB',
   black: '#222222',
 }
-// Font Stuff
 const fontFamily = {
   roboto: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
 }
 const fontSizes = [14, 16, 18, 20, 24, 30, 36, 48, 60, 72, 96]
 const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 const percentSizes = [20, 25, 40, 50, 60, 75, 80, 100]
+
 const percentSizesCalc = {
   '33%': 'calc(100% * (1/3))',
   '66%': 'calc(100% * (2/3))',
@@ -22,9 +22,7 @@ const remSpacings = [4, 8, 12, 16, 18, 20, 24, 32, 40, 48, 56, 64, 80, 96]
 const viewportSizes = [25, 50, 75, 100]
 const screenSizes = [320, 480, 640, 768, 960, 1024, 1280, 1366]
 
-// #endregion
-
-// #region Object Creation
+// ANCHOR Object Creation
 
 const rem = value => `${value / 16}rem`
 
@@ -91,9 +89,7 @@ const margin = {
   ...remSpacingNegative,
 }
 
-// #endregion
-
-// #region Custom Plugins
+// ANCHOR Plugins
 
 const ie = ({ addVariant, e }) => {
   addVariant('ie', ({ modifySelectors, separator }) => {
@@ -101,9 +97,7 @@ const ie = ({ addVariant, e }) => {
   })
 }
 
-// #endregion
-
-// #region Configuration Object
+// ANCHOR Core Config
 
 const config = {
   corePlugins: {
@@ -138,5 +132,3 @@ const config = {
 }
 
 module.exports = config
-
-// #endregion
