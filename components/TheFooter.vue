@@ -1,20 +1,17 @@
 <template>
   <footer>
-    <div
-      class="w-100% h-0 relative text-black"
-      style="padding-bottom: calc(100% * 83/1366);">
-      <Waves class="absolute w-100% h-100% top-0 left-0" />
-      <div class="w-100% absolute bottom-0 bg-text-black h-2" />
-    </div>
+    <TheWaves classes="text-black" />
     <div class="h-32 bg-black" />
   </footer>
 </template>
 
 <script>
   import { value } from 'vue-function-api'
+  import TheWaves from '~/components/TheWaves.vue'
 
   export default {
     name: 'Header',
+    components: { TheWaves },
     setup() {
       const links = value([
         { text: 'Contact', link: '/contact', newTab: false },

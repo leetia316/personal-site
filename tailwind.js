@@ -1,4 +1,5 @@
-// Colors
+// #region Values
+
 const colors = {
   'deep-blue': '#0068A7',
   'sea-green': '#1ACCAC',
@@ -20,6 +21,10 @@ const remSizes = [2, 16, 24, 32, 48, 64, 96, 128, 175, 256, 320, 480, 640, 768, 
 const remSpacings = [4, 8, 12, 16, 18, 20, 24, 32, 40, 48, 56, 64, 80, 96]
 const viewportSizes = [25, 50, 75, 100]
 const screenSizes = [320, 480, 640, 768, 960, 1024, 1280, 1366]
+
+// #endregion
+
+// #region Object Creation
 
 const rem = value => `${value / 16}rem`
 
@@ -86,11 +91,19 @@ const margin = {
   ...remSpacingNegative,
 }
 
+// #endregion
+
+// #region Custom Plugins
+
 const ie = ({ addVariant, e }) => {
   addVariant('ie', ({ modifySelectors, separator }) => {
     modifySelectors(({ className }) => `html.ua-ie .ie${e(`${separator}${className}`)}`)
   })
 }
+
+// #endregion
+
+// #region Configuration Object
 
 const config = {
   corePlugins: {
@@ -125,3 +138,5 @@ const config = {
 }
 
 module.exports = config
+
+// #endregion

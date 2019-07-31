@@ -17,7 +17,7 @@
           <TheButton
             element="a"
             secondary
-            newtab
+            new-tab
             link="/MattWaler.pdf"
             text="View Resume" />
         </div>
@@ -37,12 +37,7 @@
     </div>
 
     <!-- Waves -->
-    <div
-      class="w-100% h-0 relative text-deep-blue"
-      style="padding-bottom: calc(100% * 83/1366);">
-      <Waves class="absolute w-100% h-100% top-0 left-0" />
-      <div class="w-100% absolute bottom-0 bg-deep-blue h-2" />
-    </div>
+    <TheWaves classes="text-deep-blue" />
 
     <!-- Skills -->
     <div class="bg-deep-blue w-100% text-white pb-24 pt-16 960:pb-48">
@@ -123,13 +118,14 @@
 
 <script>
   import TheButton from '~/components/TheButton.vue'
+  import TheWaves from '~/components/TheWaves.vue'
   import {
     hero, skills, hobbies, pedestal,
   } from '~/content/index'
 
   export default {
     name: 'Index',
-    components: { TheButton },
+    components: { TheButton, TheWaves },
     head: () => ({
       title: 'Matt Waler | Frontend Developer',
     }),
